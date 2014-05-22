@@ -1,0 +1,10 @@
+<br>
+<li class="task">
+	<strong><%= task.escape("title") %></strong>
+	<br>
+	DELEGATE: <%= task.escape("member_id") %>
+	<br>
+	STATUS: <%= task.escape("status") %>
+	<br>
+	<button class="destroyTask" data-id="task.id">Destroy Task</button>
+</li>
