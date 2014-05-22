@@ -53,6 +53,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'debugger'
   gem 'pry-rails'
-  gem 'bcrypt'
-  gem 'oauth'
 end
+
+gem 'oauth'
+gem 'bcrypt'
