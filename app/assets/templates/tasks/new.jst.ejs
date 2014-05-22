@@ -1,5 +1,5 @@
 <br>
-<form>
+<form id="taskform">
 	<input
 		type="hidden"
 		id="task_phase_id"
@@ -17,9 +17,9 @@
 
 	<label>
 		Task Status: 
-		<select>
-   			<option selected id="task_status" name="task[status]" value="Incomplete">Incomplete</option>
-    		<option id="task_status" name="task[status]" value="Complete">Complete</option>
+		<select id="task_status" name="task[status]">
+   			<option selected value="Incomplete">Incomplete</option>
+    		<option value="Complete">Complete</option>
 		</select>
 	</label>
 	<br>
@@ -35,4 +35,10 @@
 	<br>
 
 	<input type="submit">
-</form>
+</form
+
+<select id="task_member_id" name="task[member_id]>
+   			<option selected></option>
+   			<option value="Incomplete">Incomplete</option>
+    		<option value="Complete">Complete</option>
+		</select>
