@@ -1,0 +1,1 @@
+json.partial!("phase", :phase => @phase, :tasks => @tasks)

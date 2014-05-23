@@ -2,11 +2,12 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	template: JST['members/show'],
 
 	events: {
+		"click button.editMember": "editMember", 
 		"click button.destroyMember": "destroyMember"
 	},
 
 	initialize: function() {
-		this.listenTo(this.model, "sync remove", this.render);
+		this.listenTo(this.model, "sync change:fname change:lname change:bio remove", this.render);
 	},
 
 	render: function() {
@@ -19,9 +20,19 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 		return this;
 	},
 
+	editMember: function(event) {
+		$(event.target).toggleClass('hidden');
+		debugger;
+		var editMemberView = new FinalApp.Views.MemberEdit({
+			model: this.model, 
+			collection: this.model.collection
+		});
+
+		this.$el.find('#members-edit').append(editMemberView.render().$el);
+	},
+
 	destroyMember: function(event) {
 		event.preventDefault();
-		console.log(this.model);
 		this.model.destroy();
 		Backbone.history.navigate("", { trigger: true });
 	}

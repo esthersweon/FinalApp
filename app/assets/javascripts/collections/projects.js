@@ -6,6 +6,7 @@ FinalApp.Collections.Projects = Backbone.Collection.extend({
 	    var project;
 	    if (project = this.get(id)) {
 	      project.fetch();
+	      return project;
 	    } else {
 	      project = new FinalApp.Models.Project({ id: id });
 	      project.fetch({
@@ -13,8 +14,7 @@ FinalApp.Collections.Projects = Backbone.Collection.extend({
 	        	projects.add(project);
 	        }
 	      });
+	      return project;
 	    }
-
-	    return project;
-  }
+	}
 })

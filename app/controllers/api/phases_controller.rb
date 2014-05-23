@@ -2,18 +2,19 @@ module Api
   class PhasesController < ApiController
     def index
       @phases = Project.find(params[:project_id]).phases
-      render json: @phases
+      render "api/phases/index"
     end
 
     def show
       @phase = Phase.find(params[:id])
-      render json: @phase
+      @tasks = @phase.tasks
+      render "api/phases/show"
     end
 
     def create
       @phase = Phase.new(phase_params)
       if @phase.save
-        render json: @phase
+        render "api/phases/show"
       else
         render json: @phase.errors.full_messages
       end
@@ -23,7 +24,7 @@ module Api
       @phase = Phase.find(params[:id])
 
       if @phase.update_attributes(phase_params)
-        render json: @phase
+        render "api/phases/show"
       else
         render json: @phase.errors.full_messages
       end
@@ -31,7 +32,7 @@ module Api
 
     def destroy
       Phase.find(params[:id]).try(:destroy)
-      render json: {}
+      render "api/phases/show"
     end
 
     private

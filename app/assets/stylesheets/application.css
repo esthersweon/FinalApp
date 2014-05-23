@@ -12,8 +12,16 @@
  *= require_tree .
  */
 
-header {
+header#log_out {
+  text-align: right
+}
+
+header#app_title {
 	text-align: center
+}
+
+body {
+  text-align: center
 }
 
 div#sign_in {
@@ -40,8 +48,6 @@ div#content {
 }
 
 .project {
-	float: left;
-	width: 400px;
 }
 
 .pull-me{

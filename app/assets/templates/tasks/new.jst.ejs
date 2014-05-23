@@ -27,10 +27,15 @@
 
 	<label>
 		Delegate (optional):
-		<input
-			type="text"
+
+		<select
 			id="task_delegate"
 			name="task[member_id]">
+				//ITERATE THROUGH CURRENT USER'S MEMBERS (member)//
+				<option selected value=<%= member.id%>>
+					<%= member.escape("fname") + " " + member.escape("lname") %>
+				</option>
+		</select>
 	</label>
 	<br>
 

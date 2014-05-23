@@ -4,44 +4,42 @@ module Api
   
     def index
       @projects = Project.where(:user_id => current_user.id)
-      render json: @projects
+      render "api/projects/index"
     end
 
     def show
       @project = Project.find(params[:id])
-      render json: @project
+      @phases = @project.phases
+      render "api/projects/show"
     end
 
     def create
       @project = Project.new(project_params)
       @project.user_id = current_user.id
       if @project.save
-        render json: @project
+        render "api/projects/show"
       else
-        render json: @project.errors.full_messages
+        render json: @project.errors, status: :unprocessable_entity
       end
     end
 
-  #   def update
-  #     @project = current_user.projects.find(params[:id])
+    def update
+      @project = current_user.projects.find(params[:id])
 
-  #     if params[:newMemberEmail]
-  #       email = params[:newMemberEmail]
-  #       new_member = User.find_by_email(email)
-  #       new_member && !@board.members.include?(new_member) && @board.members << new_member
-  #     end
-
-  #     if @project.update_attributes(project_params)
-  #       render partial: "api/projects/project", locals: { project: @project }
-  #     else
-  #       render json: { errors: @project.errors.full_messages }, status: 422
-  #     end
-  #   end
+      if @project.update_attributes(project_params)
+        render "api/projects/show"
+      else
+        render json: @project.errors, status: :unprocessable_entity
+      end
+    end
 
     def destroy
       @project = Project.find(params[:id])
-      @project.destroy
-      render json: {}
+      if @project.destroy
+        render "api/projects/show"
+      else
+        raise "Could not destroy"
+      end
     end
 
     private
