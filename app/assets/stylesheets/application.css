@@ -12,6 +12,18 @@
  *= require_tree .
  */
 
+header {
+	text-align: center
+}
+
+div#sign_in {
+	text-align: center;
+}
+
+div#sign_up {
+	text-align: center;
+}
+
 div#content {
   margin:50px auto;
   width: auto;
@@ -30,4 +42,21 @@ div#content {
 .project {
 	float: left;
 	width: 400px;
+}
+
+.pull-me{
+    -webkit-box-shadow: 0 0 8px #FFD700;
+    -moz-box-shadow: 0 0 8px #FFD700;
+    box-shadow: 0 0 8px #FFD700;
+    cursor:pointer;
+}
+.panel {
+	background: #ffffbd;
+    background-size:90% 90%;
+    height:300px;
+	display:none;
+    font-family:garamond,times-new-roman,serif;
+}
+.panel p{
+    text-align:center;
 }

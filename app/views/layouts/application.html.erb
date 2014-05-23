@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="script.js"></script>
+
 </head>
 
 <body>
@@ -12,10 +14,21 @@
 	  <% if signed_in? %>
 	  	<%= "Welcome, Team " + current_user.username + "!"%>
 	    <%= button_to "Log out", session_url, { method: :delete } %>
+	  <% else %>
+	  	<h1>Team Player App</h1>
+	  	<div class="panel">
+        	<br />
+        	<p>TEAM PLAYER IS A BITCHIN' APP.</p>
+        	<%= link_to "Sign In Here", new_session_url %><br>
+        	<%= link_to "Sign Up Here", new_user_url %><br>
+        </div>
+        <p class="slide"><div class="pull-me">ABOUT US</div></p>
+
+
+
 	  <% end %>
 	</header>
-
-  <h1>Team Player App</h1>
+	
 
 <%= yield %>
 

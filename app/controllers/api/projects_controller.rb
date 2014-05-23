@@ -1,5 +1,7 @@
 module Api
   class ProjectsController < ApiController
+  before_filter :require_signed_in
+  
     def index
       @projects = Project.where(:user_id => current_user.id)
       render json: @projects

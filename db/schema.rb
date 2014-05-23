@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140522200749) do
 
   create_table "projects", force: true do |t|
     t.string   "title",       null: false
-    t.string   "description", null: false
+    t.text     "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
