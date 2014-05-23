@@ -9,6 +9,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  bio        :text
+#  role       :string(255)
 #
 
 class Member < ActiveRecord::Base

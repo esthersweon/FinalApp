@@ -1,0 +1,43 @@
+<br>
+<form id="taskform">
+  <input
+    type="hidden"
+    id="task_phase_id"
+    name="task[phase_id]"
+    value="<%= phaseID %>">
+
+  <label>
+    Task Title: 
+    <input
+      type="text"
+      id="task_title"
+      name="task[title]">
+  </label>
+  <br>
+
+  <label>
+    Task Status: 
+    <select id="task_status" name="task[status]">
+        <option selected value="Incomplete">Incomplete</option>
+        <option value="Complete">Complete</option>
+    </select>
+  </label>
+  <br>
+
+
+  <label>
+    Delegate (optional):
+
+    <select
+      id="task_delegate"
+      name="task[member_id]">
+        //ITERATE THROUGH CURRENT USER'S MEMBERS (member)//
+        <option selected value=<%= member.id%>>
+          <%= member.escape("fname") + " " + member.escape("lname") %>
+        </option>
+    </select>
+  </label>
+  <br>
+
+  <input type="submit">
+</form

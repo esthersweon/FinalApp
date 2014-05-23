@@ -22,13 +22,12 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 
 	editMember: function(event) {
 		$(event.target).toggleClass('hidden');
-		debugger;
 		var editMemberView = new FinalApp.Views.MemberEdit({
 			model: this.model, 
 			collection: this.model.collection
 		});
 
-		this.$el.find('#members-edit').append(editMemberView.render().$el);
+		this.$el.find('#member-edit').append(editMemberView.render().$el);
 	},
 
 	destroyMember: function(event) {

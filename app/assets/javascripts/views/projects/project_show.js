@@ -3,10 +3,12 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 
 	events: {
 		"click button.destroyProject": "destroyProject", 
-		"click button.newPhase": "newPhase"
+		"click button.newPhase": "newPhase", 
+		"click button.editProject": "editProject"
 	},
 
 	initialize: function() {
+		this.listenTo(this.model, "sync add", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addPhase);
 
@@ -38,7 +40,6 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 
 	destroyProject: function(event) {
 		event.preventDefault();
-		console.log(this.model);
 		this.model.destroy();
 		Backbone.history.navigate("", { trigger: true });
 	},
@@ -51,6 +52,16 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.find('#phases-new').append(newPhaseView.render().$el);
+	}, 
+
+	editProject: function(event) {
+		$(event.target).toggleClass('hidden');
+		var editProjectView = new FinalApp.Views.ProjectEdit({
+      		model: this.model,
+      		collection: this.model.collection
+		});
+
+		this.$el.find('#project-edit').append(editProjectView.render().$el);
 	}
 
 });

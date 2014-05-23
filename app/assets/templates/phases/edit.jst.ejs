@@ -1,0 +1,20 @@
+<form>
+
+  <label>Phase Title
+    <input type="text"
+    id="phase_title"
+    name="phase[title]"
+    value="<%= phase.escape("title") %>">
+  </label>
+  <br>
+
+  <label>End Date
+    <input type="date"
+    id="phase_end_date"
+    name="phase[end_date]"
+    value="<%= phase.escape("end_date") %>">
+  </label>
+  <br>
+
+  <input type="submit">
+</form>

@@ -2,7 +2,9 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	template: JST['phases/show'], 
 	events: {
 		"click button.newTask": "newTask", 
-		"click button.destroyPhase": "destroyPhase"
+		"click button.destroyPhase": "destroyPhase", 
+		"click button.editPhase": "editPhase",
+		"click button.editTask": "editTask"
 	}, 
 
 	initialize: function() {
@@ -46,5 +48,17 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	destroyPhase: function(event) {
 		event.preventDefault();
 		this.model.destroy();
-	}
+	}, 
+
+	editPhase: function(event) {
+		$(event.target).toggleClass('hidden');
+		var editPhaseView = new FinalApp.Views.PhaseEdit({
+			model: this.model, 
+			collection: this.model.collection
+		});
+
+		this.$el.find('#phase-edit').append(editPhaseView.render().$el);
+	}, 
+
+	editTask: function(event) {}
 });

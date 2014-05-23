@@ -8,7 +8,7 @@
 
 <% members.each (function(member) { %>
 	<li class="member">
-		<a href="#/members/<%= member.id %>"><%= member.escape("lname") + ", " + member.escape("fname")%></a>
+		<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") + " - " + member.escape("role") %></a>
 	</li>
 <% }) %>
 

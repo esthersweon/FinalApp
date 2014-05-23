@@ -1,13 +1,14 @@
 <h1><%= member.escape("fname") + " " + member.escape("lname")%></h1>
+<h2>ROLE: <%= member.escape("role") %></h2>
 
 <p><%= member.escape("bio")%></p>
 
-<div id="members-edit"></div>
+<div id="member-edit"></div>
 <br>
 <br>
 <br>
 
 <button class="editMember">Edit Member</button>
-<button class="destroyMember">Destroy Member</button>
+<button class="destroyMember">Delete Member</button>
 <br><br>
 <a href="#/">Back To Team HomePage</a>

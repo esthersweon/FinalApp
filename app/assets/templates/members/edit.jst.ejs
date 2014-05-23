@@ -1,5 +1,3 @@
-<h1>Edit Member</h1>
-
 <form>
   
 	<label>First Name: 
@@ -15,6 +13,14 @@
     type="text"
     name="lname"
     value="<%= member.escape("lname") %>">
+  </label>
+  <br>
+
+  <label>Role (optional): 
+  <input
+    type="text"
+    name="role"
+    value="<%= member.escape("role") %>">
   </label>
   <br>
 

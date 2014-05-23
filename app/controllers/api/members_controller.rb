@@ -24,7 +24,7 @@ class MembersController < ApiController
       @member = current_user.members.find(params[:id])
 
       if @member.update_attributes(member_params)
-        render partial: "api/members/show"
+        render "api/members/show"
       else
         render json: { errors: @member.errors.full_messages }, status: 422
       end
@@ -38,7 +38,7 @@ class MembersController < ApiController
 
     private
     def member_params
-      params.require(:member).permit(:fname, :lname, :bio)
+      params.require(:member).permit(:fname, :lname, :role, :bio)
     end
   
 end

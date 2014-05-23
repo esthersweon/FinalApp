@@ -1,18 +1,13 @@
-FinalApp.Views.MemberEdit = Backbone.View.extend({
+FinalApp.Views.ProjectEdit = Backbone.View.extend({
 	events: {
 		'click input[type="submit"]': "update"
 	}, 
 
-	template: JST['members/edit'], 
-
-	initialize: function() {
-		this.listenTo(this.model, "sync", this.render);
-		this.listenTo(this.collection, "sync add remove", this.render);
-	},
+	template: JST['projects/edit'], 
 
 	render: function() {
 		var renderedContent = this.template({
-			member: this.model
+			project: this.model
 		});
 
 		this.$el.html(renderedContent);
@@ -25,7 +20,6 @@ FinalApp.Views.MemberEdit = Backbone.View.extend({
 		var attrs = $(event.target.form).serializeJSON();
 		this.model.set(attrs);
 		this.model.save();
-		this.collection.fetch();
 		this.collection.trigger('add');
 	}
 })

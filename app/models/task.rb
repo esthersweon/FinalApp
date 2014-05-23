@@ -8,7 +8,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  member_id  :integer
-#  status     :text
+#  status     :text             default("Incomplete"), not null
 #
 
 class Task < ActiveRecord::Base
