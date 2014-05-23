@@ -9,8 +9,8 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 		debugger;
 		var renderedContent = this.template({
 			task: new FinalApp.Models.Task(),
-			phaseID: this.model.id
-			//currentUserID: this.model.collection.project.collection.models[0].attributes.user_id
+			phaseID: this.model.id, 
+			members: FinalApp.members
 		});
 
 		this.$el.html(renderedContent);

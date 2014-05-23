@@ -19,7 +19,7 @@ module Api
       if @project.save
         render "api/projects/show"
       else
-        render json: @project.errors, status: :unprocessable_entity
+        render json: {errors: @project.errors.full_messages}, status: 422
       end
     end
 
@@ -29,7 +29,7 @@ module Api
       if @project.update_attributes(project_params)
         render "api/projects/show"
       else
-        render json: @project.errors, status: :unprocessable_entity
+        render json: {errors: @project.errors.full_messages}, status: 422
       end
     end
 

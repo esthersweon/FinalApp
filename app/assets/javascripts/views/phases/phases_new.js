@@ -2,7 +2,8 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
 	template: JST["phases/new"],
 
 	events: {
-		"click input[type='submit']": "submit"
+		"click input[type='submit']": "submit", 
+		"click button.cancel": "cancel"
 	}, 
 
 	initialize: function() {
@@ -22,15 +23,24 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
 
 	submit: function(event) {
 		event.preventDefault();
-
 		var attrs = $(event.target.form).serializeJSON();
 		var phases = this.collection;
+
+		debugger;
 
     	this.collection.create(attrs, {
       		success: function (data) {
         		phases.add(data);
         		Backbone.history.navigate("#projects/" + phases.project.attributes.id, { trigger: true });
+      		}, 
+      		error: function() {
+
       		}
     	});	
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("#/projects/" + this.model.id, { trigger: true });
 	}
 });

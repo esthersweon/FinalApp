@@ -1,6 +1,7 @@
 FinalApp.Views.MemberForm = Backbone.View.extend({
 	events: {
-		'click input[type="submit"]': "submit"
+		'click input[type="submit"]': "submit", 
+		"click button.cancel": "cancel"
 	}, 
 
 	template: JST['members/form'], 
@@ -20,9 +21,18 @@ FinalApp.Views.MemberForm = Backbone.View.extend({
 		var attrs = $(event.target.form).serializeJSON();
 
 		var newMember = this.collection.create(attrs, {
-			success: function(savedMember) {
-				Backbone.history.navigate("#members/" + savedMember.id, {trigger: true});
+			success: function() {
+				this.collection.fetch({
+					success: function(savedMember) {
+						Backbone.history.navigate("#members/" + savedMember.id, {trigger: true});
+						}
+				});
 			}
 		});
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("", { trigger: true });
 	}
 })

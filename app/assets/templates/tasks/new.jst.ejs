@@ -30,10 +30,11 @@
 		<select
 			id="task_delegate"
 			name="task[member_id]">
-				//ITERATE THROUGH CURRENT USER'S MEMBERS (member)//
-				<option selected value=<%= member.id%>>
+				<% members.each( function(member) { %>
+					<option selected value="<%= member.escape("id")%>">
 					<%= member.escape("fname") + " " + member.escape("lname") %>
-				</option>
+					</option>
+				<% }) %>
 		</select>
 	</label>
 	<br>

@@ -1,6 +1,7 @@
 FinalApp.Views.MemberEdit = Backbone.View.extend({
 	events: {
-		'click input[type="submit"]': "update"
+		'click input[type="submit"]': "update", 
+		'click button.cancel': "cancel"
 	}, 
 
 	template: JST['members/edit'], 
@@ -27,5 +28,10 @@ FinalApp.Views.MemberEdit = Backbone.View.extend({
 		this.model.save();
 		this.collection.fetch();
 		this.collection.trigger('add');
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("#/members/" + this.model.id, { trigger: true });
 	}
 })

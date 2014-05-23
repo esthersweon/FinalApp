@@ -16,7 +16,7 @@ module Api
       if @phase.save
         render "api/phases/show"
       else
-        render json: @phase.errors.full_messages
+        render json: { errors: @phase.errors.full_messages }, status: 422
       end
     end
 
@@ -26,7 +26,7 @@ module Api
       if @phase.update_attributes(phase_params)
         render "api/phases/show"
       else
-        render json: @phase.errors.full_messages
+        render json: { errors: @phase.errors.full_messages }, status: 422
       end
     end
 

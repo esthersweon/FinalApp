@@ -16,7 +16,7 @@ class MembersController < ApiController
       if @member.save
         render "api/members/show"
       else
-        render json: @member.errors.full_messages
+        render json: { errors: @member.errors.full_messages }, status: 422
       end
     end
 

@@ -15,23 +15,17 @@ module Api
       if @task.save
         render json: @task
       else
-        render json: @task.errors.full_messages
+        render json: {errors: @task.errors.full_messages}, status: 422
       end
     end
 
     # def update
     #   @task = Task.find(params[:id])
 
-    #   if params[:newUserEmail]
-    #     email = params[:newUserEmail]
-    #     new_user = User.find_by_email(email)
-    #     new_user && !@card.users.include?(new_user) && @card.users << new_user
-    #   end
-
     #   if @card.update_attributes(card_params)
     #     render partial: "api/cards/card", locals: { card: @card }
     #   else
-    #     render json: { errors: @card.errors.full_messages }, status: 422
+    #     render json: {errors: @task.errors.full_messages}, status: 422
     #   end
     # end
 
