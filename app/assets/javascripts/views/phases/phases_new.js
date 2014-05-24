@@ -26,8 +26,6 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
 		var attrs = $(event.target.form).serializeJSON();
 		var phases = this.collection;
 
-		debugger;
-
     	this.collection.create(attrs, {
       		success: function (data) {
         		phases.add(data);
