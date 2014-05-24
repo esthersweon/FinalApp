@@ -6,7 +6,6 @@ FinalApp.Views.PhaseEdit = Backbone.View.extend({
 	template: JST['phases/edit'], 
 
 	render: function() {
-		debugger;
 		var renderedContent = this.template({
 			phase: this.model
 			//FIGURE OUT NOW. WHAT IS project: 

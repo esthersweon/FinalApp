@@ -6,12 +6,17 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 	}, 
 
 	routes: {
-		"": "projectsIndex", 
+		"": "dashboardView",
+		"projects": "projectsIndex", 
 		"projects/new": "projectsNew", 
 		"projects/:id": "projectShow", 
 		"members/new": "membersNew", 
 		"members/:id": "memberShow"
 	}, 
+
+	dashboardView: function() {
+		//GENERIC WELCOME TO PYRAMID MESSAGE
+	},
 
 	projectsIndex: function() {
 		var that = this;
