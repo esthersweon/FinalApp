@@ -18,5 +18,5 @@ FinalApp::Application.routes.draw do
     resources :tasks, only: [:show, :update]
 
   end
-
+  get '/membertasks', to: 'tasks#memberindex'
 end

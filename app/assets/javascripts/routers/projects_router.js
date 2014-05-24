@@ -50,6 +50,7 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 			model: project,
 			collection: project.phases()
 		});
+		debugger;
 		project.phases().fetch();
 		this._swapView(showView);
 	},
@@ -67,8 +68,11 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 	memberShow: function(id) {
 		var member = this.members.getOrFetch(id);
 		var memberShowView = new FinalApp.Views.MemberShow({
-			model: member
+			model: member, 
+			collection: member.tasks()
 		});
+		debugger;
+		member.tasks().fetch();
 		this._swapView(memberShowView);
 	},
 
