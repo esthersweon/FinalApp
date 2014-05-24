@@ -2,7 +2,6 @@ FinalApp.Models.Member = Backbone.Model.extend({
 	urlRoot: "api/members", 
 
 	tasks: function() {
-		debugger;
 		if(!this._tasks){
 			this._tasks = new FinalApp.Collections.Tasks([], {
 				phase: this

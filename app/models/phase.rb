@@ -14,6 +14,6 @@ class Phase < ActiveRecord::Base
 	validates :title, :end_date, :project_id, presence: true
 
 	belongs_to :project, inverse_of: :phases
-	has_many :tasks, inverse_of: :phase
+	has_many :tasks, inverse_of: :phase, dependent: :destroy
 
 end

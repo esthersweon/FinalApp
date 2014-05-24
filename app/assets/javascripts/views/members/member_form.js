@@ -19,15 +19,17 @@ FinalApp.Views.MemberForm = Backbone.View.extend({
 	submit: function(event) {
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON();
+		var members = this.collection;
+		this.collection.create(attrs);
+		debugger;
 
-		var newMember = this.collection.create(attrs, {
-			success: function() {
-				this.collection.fetch({
-					success: function(savedMember) {
-						Backbone.history.navigate("#members/" + savedMember.id, {trigger: true});
-						}
-				});
-			}
+		this.collection.create(attrs, {
+			wait: true,
+			success: function(savedMember) {
+				debugger;
+				members.add(savedMember);
+				Backbone.history.navigate("#members/" + savedMember.id, {trigger: true});
+				}
 		});
 	}, 
 

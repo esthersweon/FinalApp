@@ -28,11 +28,9 @@ FinalApp.Views.MemberEdit = Backbone.View.extend({
 		this.model.save(attrs, {
 			wait: true,
 			success: function() {
-				console.log("yep");
 				that.collection.trigger('add');
 			},
 			error: function () {
-				console.log("nope");
 			}
 		});
 	}, 

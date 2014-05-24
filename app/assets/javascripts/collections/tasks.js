@@ -5,7 +5,6 @@ FinalApp.Collections.Tasks = Backbone.Collection.extend({
 	}, 
 	
 	initialize: function (models, options) {
-		debugger
 		this.phase = options.phase;
 	}
 })

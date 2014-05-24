@@ -5,7 +5,7 @@
 	<label>First Name: 
   <input
     type="text"
-    name="fname"
+    name="member[fname]"
     value="<%= member.escape("fname") %>">
   </label>
   <br>
@@ -13,23 +13,23 @@
   <label>Last Name: 
   <input
     type="text"
-    name="lname"
+    name="member[lname]"
     value="<%= member.escape("lname") %>">
   </label>
   <br>
 
-  <label>Role (optional): 
+  <label>Role: 
   <input
     type="text"
-    name="role"
-    value="<%= member.escape("role") %>">
+    name="member[role]"
+    value="Team Member">
   </label>
   <br>
 
   <label>Short Bio (optional): 
   <input
     type="textarea"
-    name="bio"
+    name="member[bio]"
     value="<%= member.escape("bio") %>">
   </label>
   <br>

@@ -9,12 +9,17 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  bio        :text
-#  role       :string(255)
+#  role       :string(255)      default("Team Member")
 #
 
 class Member < ActiveRecord::Base
-	validates :fname, :lname, :user_id, presence: true
+	before_save :default_values
+	validates :fname, :lname, :user_id, :role, presence: true
 
 	belongs_to :user, inverse_of: :members
 	has_many :tasks, inverse_of: :member
+
+	def default_values
+		self.role ||= "Team Member"
+	end
 end

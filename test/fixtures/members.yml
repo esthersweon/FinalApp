@@ -9,7 +9,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  bio        :text
-#  role       :string(255)
+#  role       :string(255)      default("Team Member")
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
