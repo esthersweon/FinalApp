@@ -1,27 +1,5 @@
-<img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="550">
-
-<h2>home page<h2>
-<br>
-
-<div class="row">
-
-<div class="col-hp-1">
-<h2><u>||   team members   ||</u></h2>
-<br>
-
-<ul>
-<% members.each (function(member) { %>
-	<li class="member">
-		<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") + " - " + member.escape("role") %></a>
-	</li>
-<% }) %>
-</ul>
-
-<h3><a href="#/members/new">add a team member</a></h3>
-</div>
-
-<div class="col-hp-1">
 <h2><u>||   projects   ||</u></h2>
+<h3>total projects: <%= projects.length %></h3>
 <br>
 
 <ul>
@@ -33,6 +11,3 @@
 </ul>
 
 <h3><a href="#/projects/new">create a project</a></h3>
-</div>
-
-</div>

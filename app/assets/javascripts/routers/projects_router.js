@@ -9,36 +9,32 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 		"": "dashboardView",
 		"projects": "projectsIndex", 
 		"projects/new": "projectsNew", 
-		"projects/:id": "projectShow", 
+		"projects/:id": "projectShow",
+		"members": "membersIndex",
 		"members/new": "membersNew", 
 		"members/:id": "memberShow"
 	}, 
 
 	dashboardView: function() {
-		//GENERIC WELCOME TO PYRAMID MESSAGE
+		var dashboardView = new FinalApp.Views.DashboardView();
+
+		this._swapView(dashboardView);
 	},
 
 	projectsIndex: function() {
 		var that = this;
 		
-		this.members.fetch({
-			success: function() {
-				that.projects.fetch({
-					success: function () {
-						var indexView = new FinalApp.Views.ProjectsIndex({
-							collection: that.projects, 
-							collection2: that.members
-						});
-
-					that._swapView(indexView);
-					}
+		this.projects.fetch({
+			success: function () {
+				var indexView = new FinalApp.Views.ProjectsIndex({
+					collection: that.projects
 				});
+
+				that._swapView(indexView);
 			}
 		});
-
-		
-	}, 
-
+	},
+	
 	projectsNew: function() {
 		var newProject = new FinalApp.Models.Project();
 		var projectView = new FinalApp.Views.ProjectForm({
@@ -57,6 +53,18 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 		});
 		project.phases().fetch();
 		this._swapView(showView);
+	},
+
+	membersIndex: function() {
+		var that = this;
+		this.members.fetch({
+			success: function () {
+				var memberView = new FinalApp.Views.MembersIndex({
+					collection: that.members
+				});
+			that._swapView(memberView)
+			}
+		})
 	},
 
 	membersNew: function() {
