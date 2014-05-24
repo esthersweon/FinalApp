@@ -18,4 +18,8 @@ FinalApp::Application.routes.draw do
     resources :tasks, only: [:show, :update]
 
   end
+
+  get "about", to: 'static_pages#about'
+
+  get "contact", to: 'static_pages#contact'
 end

@@ -14,30 +14,27 @@
   <header>
     <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-project-navbar-collapse-1">
-        &#9776;
-      </button>
-      <%= link_to "P Y R A M I D", root_url, :class => "navbar-brand"%>
+      <%= link_to "p  y  r  a  m  i  d", root_url, :class => "navbar-brand"%>
     </div>
     <div class="collapse navbar-collapse" id="demo-project-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "||   Home   ||", root_url %>
-        <li><%= link_to "||   About   ||", root_url %>
-        <li><%= link_to "||   Contact   ||", root_url %>
+        <li><%= link_to "||   home   ||", root_url %>
+        <li><%= link_to "||   about   ||", about_url %>
+        <li><%= link_to "||   contact   ||", contact_url %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <%if current_user%>
         <li>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Team <%=current_user.username%>!<b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">||   welcome, team <%=current_user.username%>   ||<b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="divider"></li>
-          <li><%= link_to "Log Out", session_url, method: :delete %></li>
+          <li><%= link_to "log out", session_url, method: :delete %></li>
 
         </ul>
         </li>
         <% else %>
-        <li><%= link_to "Sign In", new_session_url %></li>
-        <li><%= link_to "New to Pyramid?", new_user_url %></li>
+        <li><%= link_to "||   sign in   ||", new_session_url %></li>
+        <li><%= link_to "||   new to pyramid?   ||", new_user_url %></li>
         <% end %>
       </ul>
     </div>
@@ -45,8 +42,7 @@
     </header>
 
     <%if !current_user%>
-      <p>
-      <img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="500"></p>
+      <img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="550">
     <% end %>
   
 
