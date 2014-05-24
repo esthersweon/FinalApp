@@ -11,7 +11,8 @@
     <input
       type="text"
       id="task_title"
-      name="task[title]">
+      name="task[title]"
+      value="<%= task.escape("title")%>">
   </label>
   <br>
 
@@ -24,17 +25,18 @@
   </label>
   <br>
 
-
   <label>
     Delegate (optional):
 
     <select
       id="task_delegate"
       name="task[member_id]">
-        //ITERATE THROUGH CURRENT USER'S MEMBERS (member)//
-        <option selected value=<%= member.id%>>
+          <option selected>None</option>
+        <% members.each( function(member) { %>
+          <option value="<%= member.escape("id")%>">
           <%= member.escape("fname") + " " + member.escape("lname") %>
-        </option>
+          </option>
+        <% }) %>
     </select>
   </label>
   <br>

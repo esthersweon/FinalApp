@@ -38,7 +38,7 @@ module Api
       if @project.destroy
         render "api/projects/show"
       else
-        raise "Could not destroy"
+        raise "Could not destroy the project"
       end
     end
 

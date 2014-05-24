@@ -6,7 +6,6 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 	}, 
 
 	render: function() {
-		debugger;
 		var renderedContent = this.template({
 			task: new FinalApp.Models.Task(),
 			phaseID: this.model.id, 

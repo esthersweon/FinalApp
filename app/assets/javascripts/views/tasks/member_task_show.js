@@ -1,4 +1,4 @@
-FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
+FinalApp.Views.MemberTaskShow = Backbone.CompositeView.extend({
 	template: JST['tasks/show'], 
 	events: {
 		"click button.destroyTask": "destroyTask", 
@@ -7,6 +7,7 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 
 	initialize: function() {
 		this.listenTo(this.model, "sync remove", this.render);
+		debugger;
 	},
 
 	render: function() {

@@ -22,12 +22,19 @@ FinalApp.Views.MemberEdit = Backbone.View.extend({
 	},
 
 	update: function(event) {
+		var that = this;
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON();
-		this.model.set(attrs);
-		this.model.save();
-		this.collection.fetch();
-		this.collection.trigger('add');
+		this.model.save(attrs, {
+			wait: true,
+			success: function() {
+				console.log("yep");
+				that.collection.trigger('add');
+			},
+			error: function () {
+				console.log("nope");
+			}
+		});
 	}, 
 
 	cancel: function(event) {

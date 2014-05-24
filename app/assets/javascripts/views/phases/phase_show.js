@@ -3,8 +3,7 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	events: {
 		"click button.newTask": "newTask", 
 		"click button.destroyPhase": "destroyPhase", 
-		"click button.editPhase": "editPhase",
-		"click button.editTask": "editTask"
+		"click button.editPhase": "editPhase"
 	}, 
 
 	initialize: function() {
@@ -17,7 +16,7 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 
 	addTask: function(task) {
 		var taskView = new FinalApp.Views.TaskShow({
-			model: task, 
+			model: task
 		});
 		this.addSubview('#tasks', taskView);	
 	},
@@ -58,7 +57,5 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.find('#phase-edit').append(editPhaseView.render().$el);
-	}, 
-
-	editTask: function(event) {}
+	}
 });

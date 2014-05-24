@@ -7,6 +7,7 @@ class MembersController < ApiController
 
     def show
       @member = Member.find(params[:id])
+      @tasks = @member.tasks
       render "api/members/show"
     end
 
