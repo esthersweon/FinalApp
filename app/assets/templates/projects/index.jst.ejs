@@ -1,37 +1,38 @@
-<h1>Team Home Page<h1>
+<img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="550">
 
-<h2><u>Team Members</u></h2>
-
-<ul>
-
+<h2>home page<h2>
 <br>
 
+<div class="row">
+
+<div class="col-hp-1">
+<h2><u>||   team members   ||</u></h2>
+<br>
+
+<ul>
 <% members.each (function(member) { %>
 	<li class="member">
 		<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") + " - " + member.escape("role") %></a>
 	</li>
 <% }) %>
-
 </ul>
 
-<h3><a href="#/members/new">Add a Team Member</a></h3>
+<h3><a href="#/members/new">add a team member</a></h3>
+</div>
 
+<div class="col-hp-1">
+<h2><u>||   projects   ||</u></h2>
 <br>
-<br>
-<br>
-
-<h2><u>Team Projects</u></h2>
 
 <ul>
-
-<br>
-
 <% projects.each (function(project) { %>
 	<li class="project">
 		<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
 	</li>
 <% }) %>
-
 </ul>
 
-<h3><a href="#/projects/new">Create a New Project</a></h3>
+<h3><a href="#/projects/new">create a project</a></h3>
+</div>
+
+</div>

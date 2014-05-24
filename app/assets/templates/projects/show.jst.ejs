@@ -1,12 +1,14 @@
-<h1>PROJECT: <%= project.escape("title") %></h1>
-<h3>PROJECT END DATE: <%= project.escape("end_date") %></h3>
-<h3>PROJECT DESCRIPTION: <%= project.escape("description") %></h3>
+<h1><%= project.escape("title") %></h1>
+<h3><strong>||   end date   ||</strong>   <%= project.escape("end_date") %></h3>
+<h3><strong>||   description   ||</strong>   <%= project.escape("description") %></h3>
 
 <br>
 
-<h3>PROJECT PHASES</h3>
-<ul id="phases">
-</ul>
+<div class="row">
+	<h3>project phases</h3>
+	<ol id="phases">
+	</ol>
+</div>
 
 <br>
 <br>
@@ -26,4 +28,4 @@
 <button class="editProject">Edit Project</button>
 <button class="destroyProject">Destroy Project</button>
 <br><br>
-<a href="#/">Back To Team HomePage</a>
+<a href="#/">back to team home page</a>

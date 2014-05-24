@@ -1,36 +1,45 @@
-<form>
-  
-	<label>First Name: 
+</form>
+
+<form role="form">
+  <div class="form-group">
+  <label>first name: 
   <input
     type="text"
-    name="fname"
-    value="<%= member.escape("fname") %>">
+    name="member[fname]"
+    value="<%= member.escape("fname") %>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-  <label>Last Name: 
+  <div class="form-group">
+  <label>last name: 
   <input
     type="text"
-    name="lname"
-    value="<%= member.escape("lname") %>">
+    name="member[lname]"
+    value="<%= member.escape("lname") %>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-  <label>Role (optional): 
+  <div class="form-group">
+  <label>role: 
   <input
     type="text"
-    name="role"
-    value="<%= member.escape("role") %>">
+    name="member[role]"
+    value="<%= member.escape("role")%>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-    <label>Short Bio (optional): 
+  <div class="form-group">
+  <label>short bio (optional): 
   <input
     type="textarea"
-    name="bio"
-    value="<%= member.escape("bio") %>">
+    name="member[bio]"
+    value="<%= member.escape("bio") %>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
   <input type="submit" value="&#10003">
   <button class="cancel">X</button>

@@ -1,26 +1,31 @@
-<h3>New Phase</h3>
-	<form>
+<h3>new phase</h3>
 
-		<input type="hidden"
-		name="phase[project_id]"
-		value="<%= project.escape("id") %>">
+<form role="form">
 
-		<label>Phase Title
-			<input type="text"
-			id="phase_title"
-			name="phase[title]"
-			value="<%= phase.title %>">
-		</label>
-		<br>
+	<input type="hidden"
+	name="phase[project_id]"
+	value="<%= project.escape("id") %>">
 
-		<label>End Date
-			<input type="date"
-			id="phase_end_date"
-			name="phase[end_date]"
-			value="<%= phase.end_date %>">
-		</label>
-		<br>
+	<div class="form-group">
+	<label>Phase Title
+		<input type="text"
+		id="phase_title"
+		name="phase[title]"
+		value="<%= phase.title %>"
+		class="form-control">
+	</label>
+	</div>
 
-		<input type="submit" value="&#10003">
-  		<button class="cancel">X</button>
-	</form>
+	<div class="form-group">
+	<label>End Date
+		<input type="date"
+		id="phase_end_date"
+		name="phase[end_date]"
+		value="<%= phase.end_date %>"
+		class="form-control">
+	</label>
+	</div>
+
+	<input type="submit" value="&#10003">
+	<button class="cancel">X</button>
+</form>

@@ -1,39 +1,45 @@
-<h1>Add a New Member</h1>
+<h1>add a team member</h1>
 
-<form>
-  
-	<label>First Name: 
+<form role="form">
+  <div class="form-group">
+	<label>first name: 
   <input
     type="text"
     name="member[fname]"
-    value="<%= member.escape("fname") %>">
+    value="<%= member.escape("fname") %>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-  <label>Last Name: 
+  <div class="form-group">
+  <label>last name: 
   <input
     type="text"
     name="member[lname]"
-    value="<%= member.escape("lname") %>">
+    value="<%= member.escape("lname") %>"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-  <label>Role: 
+  <div class="form-group">
+  <label>role: 
   <input
     type="text"
     name="member[role]"
-    value="Team Member">
+    value="team member"
+    class="form-control">
   </label>
-  <br>
+  </div>
 
-  <label>Short Bio (optional): 
+  <div class="form-group">
+  <label>short bio (optional): 
   <input
     type="textarea"
     name="member[bio]"
-    value="<%= member.escape("bio") %>">
+    value="<%= member.escape("bio") %>"
+    class="form-control">
   </label>
-  <br>
-  <br>
+  </div>
 
   <input type="submit" value="&#10003">
   <button class="cancel">X</button>

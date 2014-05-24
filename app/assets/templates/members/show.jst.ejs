@@ -1,10 +1,13 @@
 <h1><%= member.escape("fname") + " " + member.escape("lname")%></h1>
-<h2>ROLE: <%= member.escape("role") %></h2>
+<h2>||   role   ||   <%= member.escape("role") %></h2>
 
-<p><%= member.escape("bio")%></p>
 <br>
+<p><%= member.escape("bio")%></p>
 
-<h3>MEMBER'S TASKS</h3>
+<br><br>
+<br><br>
+
+<h3><u>||   assigned tasks   ||</u></h3>
 <ul id="tasks">
 </ul>
 

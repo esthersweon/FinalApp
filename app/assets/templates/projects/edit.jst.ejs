@@ -1,30 +1,33 @@
-<form>
+<form role="form">
   
+  <div class="form-group">
 	<label>Project Title: 
   <input
     type="text"
     name="title"
     value="<%= project.escape("title") %>"
-  >
+    class="form-control">
   </label>
-  <br>
+  </div>
 
+  <div class="form-group">
   <label>Project End Date: 
   <input
     type="date"
     name="end_date"
     value="<%= project.escape("end_date") %>"
-  >
+    class="form-control">
   </label>
-  <br>
+  </div>
 
+  <div class="form-group">
   <label>Project Description: 
   <input
     type="text"
     name="description"
     value="<%= project.escape("description") %>"
-  >
-  <br>
+    class="form-control">
+  </div>
 
   <input type="submit">
   

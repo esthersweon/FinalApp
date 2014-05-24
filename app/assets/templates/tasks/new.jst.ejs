@@ -1,36 +1,43 @@
 <br>
-<form id="taskform">
+<form id="taskform" role="form">
+
+
 	<input
 		type="hidden"
 		id="task_phase_id"
 		name="task[phase_id]"
 		value="<%= phaseID %>">
 
+	<div class="form-group">
 	<label>
 		Task Title: 
 		<input
 			type="text"
 			id="task_title"
-			name="task[title]">
+			name="task[title]"
+			class="form-control">
 	</label>
-	<br>
+	</div>
 
+	<div class="form-group">
 	<label>
 		Task Status: 
-		<select id="task_status" name="task[status]">
+		<select id="task_status" name="task[status]" class="form-control">
    			<option selected value="Incomplete">Incomplete</option>
     		<option value="Complete">Complete</option>
 		</select>
 	</label>
-	<br>
+	</div>
 
+	<div class="form-group">
 	<label>
 		Delegate (optional):
 
 		<select
 			id="task_delegate"
-			name="task[member_id]">
-					<option selected>None</option>
+			name="task[member_id]"
+			class="form-control">
+				<option selected>None</option>
 				<% members.each( function(member) { %>
 					<option value="<%= member.escape("id")%>">
 					<%= member.escape("fname") + " " + member.escape("lname") %>
@@ -38,7 +45,7 @@
 				<% }) %>
 		</select>
 	</label>
-	<br>
+	</div>
 
 	<input type="submit">
 </form
