@@ -16,9 +16,22 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 	}, 
 
 	dashboardView: function() {
-		var dashboardView = new FinalApp.Views.DashboardView();
+		var that = this;
+		
+		this.projects.fetch({
+			success: function () {
+				that.members.fetch({
+					success: function() {
+						var dashboardView = new FinalApp.Views.DashboardView({
+						collection: that.projects, 
+						collection2: that.members
+					});
 
-		this._swapView(dashboardView);
+					that._swapView(dashboardView);
+					}
+				});
+			}
+		});
 	},
 
 	projectsIndex: function() {
@@ -34,7 +47,7 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 			}
 		});
 	},
-	
+
 	projectsNew: function() {
 		var newProject = new FinalApp.Models.Project();
 		var projectView = new FinalApp.Views.ProjectForm({

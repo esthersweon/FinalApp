@@ -1,13 +1,22 @@
-<h2><u>||   projects   ||</u></h2>
-<h3>total projects: <%= projects.length %></h3>
-<br>
+<div class="container">
+
+	<div class="row">
+
+	<div class= "col-content">
+	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
+	</div>
+
+	<div class= "col-content">
+	<h4>||   at a glance   ||</h4>
 
 <ul>
-<% projects.each (function(project) { %>
-	<li class="project">
-		<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
-	</li>
-<% }) %>
+<li>total projects: <%= projects.length %></li>
+	<ul>
+	<% projects.each (function(project) { %>
+		<li class="project">
+			<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
+		</li>
+	<% }) %>
+	</ul>
+<li><a href="#/projects/new">create a project</a></li>
 </ul>
-
-<h3><a href="#/projects/new">create a project</a></h3>

@@ -1,12 +1,23 @@
-<h2><u>||   team members   ||</u></h2>
-<br>
+<div class="container">
+
+	<div class="row">
+
+	<div class= "col-content">
+	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
+	</div>
+
+	<div class= "col-content">
+	<h4>||   at a glance   ||</h4>
 
 <ul>
-<% members.each (function(member) { %>
-	<li class="member">
-		<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") + " - " + member.escape("role") %></a>
-	</li>
-<% }) %>
+<li>total members: <%= members.length %></li>
+	<ul>
+	<% members.each (function(member) { %>
+		<li class="member">
+			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") %></a>
+			<p>   -  <%= member.escape("role") %></p>
+		</li>
+	<% }) %>
+	</ul>
+<li><a href="#/projects/new">add a team member</a></li>
 </ul>
-
-<h3><a href="#/members/new">add a team member</a></h3>

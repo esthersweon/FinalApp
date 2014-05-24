@@ -47,28 +47,12 @@ div.login-container {
   margin-right: auto;
 }
 
-div.col-hp-1 {
-  width: 50%;
-  float: left;
-  text-align: left;
-  padding-left: 150px;
-  padding-right: 50px;
-}
-
-div.col-pp-1 {
+div.col-content {
   width: 25%;
   float: left;
   text-align: left;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-div#sign_in {
-	text-align: center;
-}
-
-div#sign_up {
-	text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 div#content {

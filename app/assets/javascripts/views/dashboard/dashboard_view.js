@@ -2,8 +2,15 @@ FinalApp.Views.DashboardView = Backbone.View.extend({
 
 	template: JST['dashboard/view'], 
 
+	initialize: function(options) {
+		this.collection2 = options.collection2
+	},
+
 	render: function() {
-		var renderedContent = this.template();
+		var renderedContent = this.template({
+			projects: this.collection,
+			members: this.collection2
+		});
 
 		this.$el.html(renderedContent);
 
