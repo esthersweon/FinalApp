@@ -20,13 +20,10 @@ FinalApp.Views.MemberForm = Backbone.View.extend({
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON();
 		var members = this.collection;
-		this.collection.create(attrs);
-		debugger;
 
 		this.collection.create(attrs, {
 			wait: true,
 			success: function(savedMember) {
-				debugger;
 				members.add(savedMember);
 				Backbone.history.navigate("#members/" + savedMember.id, {trigger: true});
 				}

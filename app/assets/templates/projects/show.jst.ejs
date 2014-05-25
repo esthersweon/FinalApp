@@ -1,31 +1,43 @@
-<h1><%= project.escape("title") %></h1>
-<h3><strong>||   end date   ||</strong>   <%= project.escape("end_date") %></h3>
-<h3><strong>||   description   ||</strong>   <%= project.escape("description") %></h3>
-
-<br>
-
+<div class="container">
 <div class="row">
-	<h3>project phases</h3>
-	<ol id="phases">
-	</ol>
+
+	<div class= "col-picture">
+	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
+	</div>
+
+	<div class= "col-longer">
+	<h4>||   <%= project.escape("title") %>   ||</h4>
+	<ul>
+		<li>end date <p>   - <%= project.escape("end_date") %></p></li>
+		<li>description <p>   - <%= project.escape("description") %></p></li>
+	</ul>
+
+	</div>
+
+	<div class= "col-shorter">
+	<h4>||   actions   ||</h4>
+	<ul>
+		<li><button class="newPhase">new phase</button></li>
+		<li><button class="editProject">edit project</button></li>
+		<li><button class="destroyProject">destroy project</button></li>
+		<li><a href="#/projects">back to projects</a></li>
+	</ul>
+		<div id="phases-new"></div>
+		<div id="project-edit"></div>
+
+		<br><br>
+		<br><br>
+		
+	</div>
+
 </div>
 
-<br>
-<br>
-<br>
+<div class="row">
+	<h4>phases</h4>
+	<ol id="phases">
+	</ol>
+	<h1>HI HI HI</h1>
+</div>
 
-<div id="phases-new"></div>
-<br>
-<br>
-<br>
 
-<div id="project-edit"></div>
-<br>
-<br>
-<br>
-
-<button class="newPhase">New Phase</button>
-<button class="editProject">Edit Project</button>
-<button class="destroyProject">Destroy Project</button>
-<br><br>
-<a href="#/">back to team home page</a>
+</div>

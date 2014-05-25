@@ -7,23 +7,21 @@
 	value="<%= project.escape("id") %>">
 
 	<div class="form-group">
-	<label>Phase Title
 		<input type="text"
 		id="phase_title"
 		name="phase[title]"
 		value="<%= phase.title %>"
+		placeholder="phase title"
 		class="form-control">
-	</label>
 	</div>
 
 	<div class="form-group">
-	<label>End Date
 		<input type="date"
 		id="phase_end_date"
 		name="phase[end_date]"
 		value="<%= phase.end_date %>"
+		placeholder="end date"
 		class="form-control">
-	</label>
 	</div>
 
 	<input type="submit" value="&#10003">

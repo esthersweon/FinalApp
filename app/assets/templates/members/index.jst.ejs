@@ -2,22 +2,30 @@
 
 	<div class="row">
 
-	<div class= "col-content">
+	<div class= "col-picture">
 	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
 	</div>
 
-	<div class= "col-content">
+	<div class= "col-longer">
 	<h4>||   at a glance   ||</h4>
 
 <ul>
-<li>total members: <%= members.length %></li>
+<li><strong>total members</strong> - <%= members.length %></li>
 	<ul>
 	<% members.each (function(member) { %>
 		<li class="member">
-			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") %></a>
-			<p>   -  <%= member.escape("role") %></p>
+			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") %></a> - <%= member.escape("role") %>
 		</li>
 	<% }) %>
+	<br>
 	</ul>
-<li><a href="#/projects/new">add a team member</a></li>
+	<button class="newMember">create a member</button>
 </ul>
+</div>
+
+	<div class= "col-content">
+		<div id="members-new"></div>
+	</div>
+
+</div>
+</div>

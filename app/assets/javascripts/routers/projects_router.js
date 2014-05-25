@@ -8,10 +8,8 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 	routes: {
 		"": "dashboardView",
 		"projects": "projectsIndex", 
-		"projects/new": "projectsNew", 
 		"projects/:id": "projectShow",
 		"members": "membersIndex",
-		"members/new": "membersNew", 
 		"members/:id": "memberShow"
 	}, 
 
@@ -48,16 +46,6 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 		});
 	},
 
-	projectsNew: function() {
-		var newProject = new FinalApp.Models.Project();
-		var projectView = new FinalApp.Views.ProjectForm({
-			model: newProject,
-			collection: this.projects 
-		});
-
-		this._swapView(projectView);
-	},
-
 	projectShow: function(id) {
 		var project = this.projects.getOrFetch(id);
 		var showView = new FinalApp.Views.ProjectShow({
@@ -78,16 +66,6 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 			that._swapView(memberView)
 			}
 		})
-	},
-
-	membersNew: function() {
-		var newMember = new FinalApp.Models.Member();
-		var memberView = new FinalApp.Views.MemberForm({
-			model: newMember, 
-			collection: this.members
-		});
-
-		this._swapView(memberView);
 	},
 
 	memberShow: function(id) {

@@ -50,7 +50,7 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	destroyMember: function(event) {
 		event.preventDefault();
 		this.model.destroy();
-		Backbone.history.navigate("", { trigger: true });
+		Backbone.history.navigate("#/members", { trigger: true });
 	}
 
 });

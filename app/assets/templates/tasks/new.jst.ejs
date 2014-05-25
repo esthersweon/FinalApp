@@ -9,30 +9,22 @@
 		value="<%= phaseID %>">
 
 	<div class="form-group">
-	<label>
-		Task Title: 
 		<input
 			type="text"
 			id="task_title"
 			name="task[title]"
+			placeholder="task title"
 			class="form-control">
-	</label>
 	</div>
 
 	<div class="form-group">
-	<label>
-		Task Status: 
 		<select id="task_status" name="task[status]" class="form-control">
    			<option selected value="Incomplete">Incomplete</option>
     		<option value="Complete">Complete</option>
 		</select>
-	</label>
 	</div>
 
 	<div class="form-group">
-	<label>
-		Delegate (optional):
-
 		<select
 			id="task_delegate"
 			name="task[member_id]"
@@ -44,7 +36,6 @@
 					</option>
 				<% }) %>
 		</select>
-	</label>
 	</div>
 
 	<input type="submit">

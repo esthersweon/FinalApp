@@ -1,23 +1,28 @@
+<div class="container">
+<div class="row">
+<div class= "col-picture">
 <%if current_user%>
-	<img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="550">
+	<img src="/images/pyramid.jpg" alt="Pyramid" width="300" height="450">
+	<br><br>
 <% end %>
+</div>
 
-<h1>pyramid</h1>
-<br>
-<br>
+<div class= "col-content">
+<h1>p   y   r   a   m   i   d</h1>
+</div>
 
-<h2>||   email   ||</h2>
-<p>esther.s.weon@gmail.com</p>
+<div class= "col-content">
+<h4>||   connect with us   ||</h4>
+<ul>
+	<li><strong>email -</strong> esther.s.weon@gmail.com</li>
+	<li><strong>linkedIn -</strong> https://www.linkedin.com/pub/esther-weon/2b/bb9/348</li>
+</ul>
 
-<h2>||   linkedin   ||</h2>
-<p>https://www.linkedin.com/pub/esther-weon/2b/bb9/348</p>
-
-<br>
-<br>
-<br>
-
-<%= link_to "||   sign in   ||", new_session_url %><br>
-<%= link_to "||   new to pyramid?   ||", new_user_url %><br>
-
-<br><br>
-<br><br>
+<div class= "col-content">
+	<%if !current_user%>
+	<%= link_to "||   sign in   ||", new_session_url %><br>
+	<%= link_to "||   new to pyramid?   ||", new_user_url %><br>
+	<% end %>
+</div>
+</div>
+</div>

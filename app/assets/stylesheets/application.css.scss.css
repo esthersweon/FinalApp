@@ -14,14 +14,6 @@
 
 @import "bootstrap";
 
-header#log_out {
-  text-align: right;
-}
-
-header#app_title {
-	text-align: center;
-}
-
 .sidebar {
   position: fixed;
   top: 51px;
@@ -41,14 +33,46 @@ body {
   background-color: white;
 }
 
-div.login-container {
+div.form-container {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 
+div.col-picture {
+  width: 20%;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 div.col-content {
   width: 25%;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.col-project {
+  width: 15%;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.col-shorter {
+  width: 15%;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.col-longer {
+  width: 30%;
   float: left;
   text-align: left;
   padding-left: 10px;
@@ -67,24 +91,4 @@ div#content {
 
 .phase {
 	width: 400px;
-}
-
-.project {
-}
-
-.pull-me{
-    -webkit-box-shadow: 0 0 8px #FFD700;
-    -moz-box-shadow: 0 0 8px #FFD700;
-    box-shadow: 0 0 8px #FFD700;
-    cursor:pointer;
-}
-.panel {
-	background: #ffffbd;
-    background-size:90% 90%;
-    height:300px;
-	display:none;
-    font-family:garamond,times-new-roman,serif;
-}
-.panel p{
-    text-align:center;
 }

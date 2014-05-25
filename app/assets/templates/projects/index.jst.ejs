@@ -2,21 +2,30 @@
 
 	<div class="row">
 
-	<div class= "col-content">
-	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
+	<div class= "col-picture">
+		<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
 	</div>
 
 	<div class= "col-content">
-	<h4>||   at a glance   ||</h4>
+		<h4>||   at a glance   ||</h4>
 
-<ul>
-<li>total projects: <%= projects.length %></li>
-	<ul>
-	<% projects.each (function(project) { %>
-		<li class="project">
-			<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
-		</li>
-	<% }) %>
-	</ul>
-<li><a href="#/projects/new">create a project</a></li>
-</ul>
+		<ul>
+			<li><strong>total projects</strong> - <%= projects.length %></li>
+		<ul>
+			<% projects.each (function(project) { %>
+				<li class="project">
+					<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
+					<p><strong>end date - </strong><%= project.escape("end_date")%></p>
+				</li>
+			<% }) %>
+		</ul>
+		<button class="newProject">create a project</button>
+		</ul>
+	</div>
+
+	<div class= "col-content">
+		<div id="projects-new"></div>
+	</div>
+
+	</div>
+</div>

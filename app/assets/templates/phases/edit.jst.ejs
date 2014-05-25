@@ -1,23 +1,21 @@
 <form role="form">
 
   <div class="form-group">
-  <label>phase title
     <input type="text"
     id="phase_title"
     name="phase[title]"
     value="<%= phase.escape("title") %>"
+    placeholder="phase title"
     class="form-control">
-  </label>
   </div>
 
   <div class="form-group">
-  <label>end date
     <input type="date"
     id="phase_end_date"
     name="phase[end_date]"
     value="<%= phase.escape("end_date") %>"
+    placeholder="end date"
     class="form-control">
-  </label>
   </div>
 
   <input type="submit">

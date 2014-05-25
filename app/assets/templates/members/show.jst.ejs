@@ -1,26 +1,37 @@
-<h1><%= member.escape("fname") + " " + member.escape("lname")%></h1>
-<h2>||   role   ||   <%= member.escape("role") %></h2>
+<div class="container">
 
-<br>
-<p><%= member.escape("bio")%></p>
+	<div class="row">
 
-<br><br>
-<br><br>
+	<div class= "col-picture">
+	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
+	</div>
 
-<h3><u>||   assigned tasks   ||</u></h3>
-<ul id="tasks">
-</ul>
+	<div class= "col-content">
+	<h4>||   <%= member.escape("fname") + " " + member.escape("lname")%>   ||</h4>
 
-<br>
-<br>
-<br>
+	<ul>
+	<li><strong>role</strong> - <%= member.escape("role") %></li>
+	<li><strong>bio</strong> - <%= member.escape("bio")%></li>
+	
+	</div>
 
-<div id="member-edit"></div>
-<br>
-<br>
-<br>
+	<div class= "col-longer">
+		<h4>||   assigned tasks   ||</h4>
+		<ul id="tasks">
+		</ul>
+	</div>
 
-<button class="editMember">Edit Member</button>
-<button class="destroyMember">Delete Member</button>
-<br><br>
-<a href="#/">Back To Team HomePage</a>
+	<div class= "col-content">
+	<h4>||   actions   ||</h4>
+	<ul>
+		<li><button class="editMember">edit member</button></li>
+		<li><button class="destroyMember">delete member</button></li>
+		<li><a href="#/members">back to members</a></li>
+	</ul>
+		<div id="member-edit">
+		</div>
+		
+	</div>
+
+	</div>
+</div>

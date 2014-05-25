@@ -29,6 +29,6 @@ FinalApp.Views.ProjectForm = Backbone.View.extend({
 
 	cancel: function(event) {
 		event.preventDefault();
-		Backbone.history.navigate("", { trigger: true });
+		Backbone.history.navigate("#/projects", { trigger: true });
 	}
 })
