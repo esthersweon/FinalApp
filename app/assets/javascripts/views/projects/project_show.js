@@ -11,13 +11,9 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.listenTo(this.model, "sync add", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addPhase);
+		this.listenTo(this, "addPhase", this.render)
 		this.collection.fetch();
 
-		var that = this;
-		this.model.fetch();
-		this.model.phases().each(function(phase){
-			that.addPhase(phase);
-		});
 	},
 
 	addPhase: function(phase){
@@ -29,6 +25,13 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 	},
 
 	render: function() {
+		this.removeSubviews();
+		
+		var that = this;
+		this.model.phases().each(function(phase){
+			that.addPhase(phase);
+		});
+
 		var renderedContent = this.template({
 			project: this.model
 		});
@@ -43,7 +46,7 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 	destroyProject: function(event) {
 		event.preventDefault();
 		this.model.destroy();
-		Backbone.history.navigate("", { trigger: true });
+		Backbone.history.navigate("#/projects", { trigger: true });
 	},
 
 	newPhase: function(event) {

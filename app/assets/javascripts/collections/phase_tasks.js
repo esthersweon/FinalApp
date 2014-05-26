@@ -1,7 +1,7 @@
 FinalApp.Collections.PhaseTasks = Backbone.Collection.extend({
 	model: FinalApp.Models.Task, 
 	url: function() {
-		return "api/phases/" + this.phase.id + "/tasks"
+		return "api/phases/" + this.phase.get("id") + "/tasks"
 	}, 
 	
 	initialize: function (models, options) {

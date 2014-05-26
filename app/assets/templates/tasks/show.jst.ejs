@@ -1,12 +1,11 @@
 <br>
 <li class="task">
-	<strong><%= task.escape("title") %></strong>
+	<strong><%= task.escape("title") %></strong> - <%= task.escape("status") %>
 	<br>
-	<strong>delegate</strong> - <%= task.escape("member_id") %>
-	<br>
-	<%= task.escape("status") %>
+	<%= member.escape("fname") %> <%= member.escape("lname") %>	
 	<br>
 	<button class="editTask" data-id=<%= task.id%>>edit task</button>
 	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
+	<br>
 	<div id="task-edit"></div>
 </li>

@@ -2,17 +2,19 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 	template: JST['tasks/show'], 
 
 	events: {
-		"click input[type='submit']": "submit", 
-		"click button.cancel": "cancel"
+		"click input[type='submit']": "submit"
 	}, 
 
 	initialize: function() {
-		this.listenTo(this.model, "sync remove", this.render);
+		this.listenTo(this.model, "sync remove", this.render)
 	},
 
 	render: function() {
+		var member = this.collection.get(this.model.attributes.member_id);
+
 		var renderedContent = this.template({
-			task: this.model
+			task: this.model, 
+			member: member
 		});
 
 		this.$el.html(renderedContent);
@@ -21,23 +23,17 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 	}, 
 
 	submit: function(event) {
+		var that = this;
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON();
-		var phases = this.collection;
 
-    	this.collection.create(attrs, {
+		this.model.save(attrs, {
       		success: function (data) {
-        		phases.add(data);
-        		Backbone.history.navigate("#projects/" + phases.project.attributes.id, { trigger: true });
+        		that.render();
       		}, 
       		error: function() {
 
       		}
     	});	
-	}, 
-
-	cancel: function(event) {
-		event.preventDefault();
-		Backbone.history.navigate("#/projects/" + this.model.id, { trigger: true });
 	}
 });

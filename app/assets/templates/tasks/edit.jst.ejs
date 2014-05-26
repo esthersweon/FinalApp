@@ -26,7 +26,6 @@
     <select
       id="task_delegate"
       name="task[member_id]">
-          <option selected>None</option>
         <% members.each( function(member) { %>
           <option value="<%= member.escape("id")%>">
           <%= member.escape("fname") + " " + member.escape("lname") %>

@@ -5,7 +5,6 @@ FinalApp.Collections.MemberTasks = Backbone.Collection.extend({
 	}, 
 	
 	initialize: function (models, options) {
-		this.phase = options.phase;
 		this.member = options.member;
 	}
 })

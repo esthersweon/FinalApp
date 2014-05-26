@@ -14,22 +14,24 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "add", this.addTask); 
 		this.listenTo(this, "addTask", this.render)
 		this.collection.fetch();
-
-		var that = this;
-		this.model.fetch();
-		this.model.tasks().each(function(task){
-			that.addTask(task);
-		});
 	},
 
 	addTask: function(task) {
 		var taskView = new FinalApp.Views.TaskShow({
-			model: task
+			model: task, 
+			collection: FinalApp.members
 		});
-		this.addSubview('#tasks', taskView);	
+		this.addSubview('#tasks', taskView);
 	},
 
 	render: function() {
+		this.removeSubviews();
+
+		var that = this;
+		this.model.tasks().each(function(task){
+			that.addTask(task);
+		});
+
 		var renderedContent = this.template({
 			phase: this.model, 
 			tasks: this.model.tasks()
@@ -45,13 +47,13 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	deleteTask: function(event) {
 		event.preventDefault();
 		var taskID = event.currentTarget.dataset.id;
-		var taskToDelete = this.model.tasks().get({id: taskID});
-		taskToDelete.destroy();
+		var taskToDelete = this.collection.get({id: taskID});
+		taskToDelete.url = this.collection.url() + "/" + taskToDelete.id;
 		
 		var that = this;
-		taskToDelete.fetch({
+		taskToDelete.destroy({
 			success: function () {
-				that.render;
+				that.collection.remove(taskToDelete);
 			}
 		});
 	},
@@ -81,7 +83,6 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 
 	displayPhase: function() {
 		$(event.target).toggleClass('hidden');
-		debugger;
 		var phaseShow = new FinalApp.Views.PhaseShow({
 			model: this.model, 
 			collection: this.model.collection

@@ -52,7 +52,6 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 			model: project,
 			collection: project.phases()
 		});
-		project.phases().fetch();
 		this._swapView(showView);
 	},
 

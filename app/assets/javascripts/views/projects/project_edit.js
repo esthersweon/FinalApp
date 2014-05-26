@@ -19,7 +19,6 @@ FinalApp.Views.ProjectEdit = Backbone.View.extend({
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON();
 		this.model.set(attrs);
-		debugger;
 		this.model.save();
 		this.collection.trigger('add');
 	}

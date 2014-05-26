@@ -1,6 +1,7 @@
 FinalApp.Views.TaskEdit = Backbone.View.extend({
 	events: {
-		'click input[type="submit"]': "update"
+		'click input[type="submit"]': "update", 
+		"click button.cancel": "cancel"
 	}, 
 
 	template: JST['tasks/edit'], 
@@ -21,8 +22,11 @@ FinalApp.Views.TaskEdit = Backbone.View.extend({
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON().task;
 		this.model.set(attrs);
-		debugger;
 		this.model.save();
-		this.model.trigger('sync');
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("#/projects/" + this.collection.project.id, { trigger: true });
 	}
 })

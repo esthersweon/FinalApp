@@ -9,7 +9,6 @@ FinalApp.Views.PhaseEdit = Backbone.View.extend({
 	render: function() {
 		var renderedContent = this.template({
 			phase: this.model
-			//FIGURE OUT NOW. WHAT IS project: 
 		});
 
 		this.$el.html(renderedContent);
@@ -27,7 +26,6 @@ FinalApp.Views.PhaseEdit = Backbone.View.extend({
 
 	cancel: function(event) {
 		event.preventDefault();
-		debugger;
 		Backbone.history.navigate("#/projects/" + this.model.attributes.project_id, { trigger: true });
 	}
 })

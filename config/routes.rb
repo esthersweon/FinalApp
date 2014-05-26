@@ -14,12 +14,14 @@ FinalApp::Application.routes.draw do
       resources :phases, only: [:index, :create, :update, :destroy]
     end
 
-    resources :phases, only: [:show, :update, :destroy] do
-      resources :tasks, only: [:create, :index, :destroy]
+    resources :phases, only: [:show] do
+      resources :tasks, only: [:create, :index, :destroy, :update]
     end
 
-    resources :tasks, only: [:show, :update]
+    resources :tasks, only: [:show]
 
   end
 
 end
+
+

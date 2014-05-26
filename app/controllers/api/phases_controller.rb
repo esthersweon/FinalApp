@@ -31,7 +31,8 @@ module Api
     end
 
     def destroy
-      Phase.find(params[:id]).try(:destroy)
+      @phase = Phase.find(params[:id])
+      @phase.try(:destroy)
       render "api/phases/show"
     end
 

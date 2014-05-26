@@ -1,9 +1,5 @@
 FinalApp.Models.Phase = Backbone.Model.extend({
 
-	initialize: function() {
-		
-	},
-
 	tasks: function() {
 		if(!this._tasks){
 			this._tasks = new FinalApp.Collections.PhaseTasks([], {

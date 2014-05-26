@@ -30,7 +30,8 @@ module Api
     end
 
     def destroy
-      Task.find(params[:id]).try(:destroy)
+      @task = Task.find(params[:id])
+      @task.try(:destroy)
       render "api/tasks/show"
     end
 

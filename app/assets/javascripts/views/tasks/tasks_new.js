@@ -9,7 +9,7 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 	render: function() {
 		var renderedContent = this.template({
 			task: new FinalApp.Models.Task(),
-			phaseID: this.model.id, 
+			phaseID: this.model.attributes.id, 
 			members: FinalApp.members
 		});
 
@@ -20,7 +20,7 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 
 	submit: function(event) {
 		event.preventDefault();
-		var attrs = $(event.target.form).serializeJSON();
+		var attrs = $(event.target.form).serializeJSON().task;
 		var tasks = this.collection;
 
 		this.collection.create(attrs, {

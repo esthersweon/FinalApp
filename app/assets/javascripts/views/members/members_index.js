@@ -18,7 +18,6 @@ FinalApp.Views.MembersIndex = Backbone.View.extend({
 	newMember: function() {
 		$(event.target).toggleClass('hidden');
     	var newMember = new FinalApp.Models.Member();
-    	debugger;
 		var memberForm = new FinalApp.Views.MemberForm({
       		model: newMember,
       		collection: this.collection
