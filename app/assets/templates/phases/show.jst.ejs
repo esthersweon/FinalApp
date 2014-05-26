@@ -1,16 +1,21 @@
 <div class="col-pp-1">
 <li class="phase">
 	<strong><%= phase.escape("title") %></strong><br>
-	End Date: <%= phase.escape("end_date") %><br>
+	end date: <%= phase.escape("end_date") %><br>
+
+	<button class="editPhase">edit phase</button>
+	<button class="deletePhase">delete phase</button>
+
+	<div id="phase-edit">
+	<br>
+	</div>
+
 	<ul>
 		<div id="tasks">
 		</div>
+		<br>
+		<li><button class="addTask">add task</button></li>
 	</ul>
-	<button class="editPhase">Edit Phase</button>
-	<button class="destroyPhase">Delete Phase</button>
-	<button class="newTask">New Task</button>
 	<div id="tasks-new"></div>
-	<div id="phase-edit"></div>
 </li>
 </div>
-

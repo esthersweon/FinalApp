@@ -9,21 +9,20 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	initialize: function() {
 		this.listenTo(this.model, "sync change:fname change:lname change:bio", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
-		// this.listenTo(this.collection, "add", this.addTask);
+		this.listenTo(this.collection, "add", this.addTask);
 
-		// var that = this;
-		// this.model.fetch();
-		// this.model.tasks().each(function(phase){
-		// 	that.addTask(task);
-		// });
+		var that = this;
+		this.model.tasks().each(function(task){
+			that.addTask(task);
+		});
 	},
 
-	// addTask: function(task) {
-	// 	var taskView = new FinalApp.Views.MemberTaskShow({
-	// 		model: task
-	// 	});
-	// 	this.addSubview('#tasks', taskView);
-	// },
+	addTask: function(task) {
+		var taskView = new FinalApp.Views.MemberTasksShow({
+			model: task
+		});
+		this.addSubview('#tasks', taskView);
+	},
 
 	render: function() {
 		var renderedContent = this.template({
@@ -32,7 +31,7 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 
 		this.$el.html(renderedContent);
 
-		// this.attachSubviews();
+		this.attachSubviews();
 
 		return this;
 	},

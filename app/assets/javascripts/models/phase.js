@@ -6,7 +6,7 @@ FinalApp.Models.Phase = Backbone.Model.extend({
 
 	tasks: function() {
 		if(!this._tasks){
-			this._tasks = new FinalApp.Collections.Tasks([], {
+			this._tasks = new FinalApp.Collections.PhaseTasks([], {
 				phase: this
 			});
 		}

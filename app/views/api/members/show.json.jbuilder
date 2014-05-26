@@ -1,1 +1,1 @@
-json.partial!("member", :member => @member)
+json.partial!("member", :member => @member, :tasks => @tasks)

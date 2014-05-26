@@ -3,8 +3,8 @@ FinalApp.Models.Member = Backbone.Model.extend({
 
 	tasks: function() {
 		if(!this._tasks){
-			this._tasks = new FinalApp.Collections.Tasks([], {
-				phase: this
+			this._tasks = new FinalApp.Collections.MemberTasks([], {
+				member: this
 			});
 		}
 		return this._tasks;
@@ -15,6 +15,7 @@ FinalApp.Models.Member = Backbone.Model.extend({
 			this.tasks().set(response.tasks, {parse: true});
 			delete response.tasks;
 		}
+
 		return response;
 	}
 })

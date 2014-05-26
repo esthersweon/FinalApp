@@ -2,7 +2,8 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 	template: JST['tasks/new'],
 
 	events: {
-		"click input[type='submit']": "submit"
+		"click input[type='submit']": "submit", 
+		"click button.cancel": "cancel"
 	}, 
 
 	render: function() {
@@ -25,8 +26,14 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 		this.collection.create(attrs, {
 			success: function(data) {
 				tasks.add(data);
-				Backbone.history.navigate("#projects/" + tasks.phase.attributes.project_id, { trigger: true });
+				Backbone.history.navigate("#/projects/" + tasks.phase.attributes.project_id, { trigger: true });
 			}
 		})
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		var tasks = this.collection;
+		Backbone.history.navigate("#/projects/" + tasks.phase.attributes.project_id, { trigger: true });
 	}
 })

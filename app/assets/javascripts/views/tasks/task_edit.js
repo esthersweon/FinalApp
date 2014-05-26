@@ -6,7 +6,6 @@ FinalApp.Views.TaskEdit = Backbone.View.extend({
 	template: JST['tasks/edit'], 
 
 	render: function() {
-		debugger;
 		var renderedContent = this.template({
 			task: this.model,
 			phaseID: this.model.attributes.phase_id, 
@@ -20,9 +19,10 @@ FinalApp.Views.TaskEdit = Backbone.View.extend({
 
 	update: function(event) {
 		event.preventDefault();
-		var attrs = $(event.target.form).serializeJSON();
+		var attrs = $(event.target.form).serializeJSON().task;
 		this.model.set(attrs);
+		debugger;
 		this.model.save();
-		this.collection.trigger('add');
+		this.model.trigger('sync');
 	}
 })

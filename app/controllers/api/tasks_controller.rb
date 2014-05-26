@@ -5,11 +5,6 @@ module Api
       render "api/tasks/index"
     end
 
-    def memberindex
-      @tasks = Member.find(param[:member_id]).tasks
-      render json: @tasks
-    end
-
     def show
       @task = Task.find(params[:id])
       render "api/tasks/show"

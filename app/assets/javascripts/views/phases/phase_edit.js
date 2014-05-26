@@ -1,6 +1,7 @@
 FinalApp.Views.PhaseEdit = Backbone.View.extend({
 	events: {
-		'click input[type="submit"]': "update"
+		'click input[type="submit"]': "update", 
+		'click button.cancel': "cancel"
 	}, 
 
 	template: JST['phases/edit'], 
@@ -22,5 +23,11 @@ FinalApp.Views.PhaseEdit = Backbone.View.extend({
 		this.model.set(attrs);
 		this.model.save();
 		this.collection.trigger('add');
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		debugger;
+		Backbone.history.navigate("#/projects/" + this.model.attributes.project_id, { trigger: true });
 	}
 })

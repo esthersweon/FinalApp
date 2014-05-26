@@ -1,8 +1,9 @@
 FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 	template: JST['tasks/show'], 
+
 	events: {
-		"click button.destroyTask": "destroyTask", 
-		"click button.editTask": "editTask"
+		"click input[type='submit']": "submit", 
+		"click button.cancel": "cancel"
 	}, 
 
 	initialize: function() {
@@ -19,24 +20,24 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 		return this;
 	}, 
 
-	destroyTask: function(event) {
-		var that = this;
+	submit: function(event) {
 		event.preventDefault();
-		this.model.destroy();
-		this.model.fetch({
-			success: function () {
-				that.render;
-			}
-		});
+		var attrs = $(event.target.form).serializeJSON();
+		var phases = this.collection;
+
+    	this.collection.create(attrs, {
+      		success: function (data) {
+        		phases.add(data);
+        		Backbone.history.navigate("#projects/" + phases.project.attributes.id, { trigger: true });
+      		}, 
+      		error: function() {
+
+      		}
+    	});	
 	}, 
 
-	editTask: function(event) {
-		$(event.target).toggleClass('hidden');
-		var editTaskView = new FinalApp.Views.TaskEdit({
-			model: this.model, 
-			collection: this.model.collection
-		});
-
-		this.$el.find('#task-edit').append(editTaskView.render().$el);
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("#/projects/" + this.model.id, { trigger: true });
 	}
 });

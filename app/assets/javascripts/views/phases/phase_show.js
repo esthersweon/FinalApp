@@ -1,9 +1,11 @@
 FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	template: JST['phases/show'], 
 	events: {
-		"click button.newTask": "newTask", 
-		"click button.destroyPhase": "destroyPhase", 
-		"click button.editPhase": "editPhase"
+		"click button.addTask": "newTask", 
+		"click button.deletePhase": "deletePhase", 
+		"click button.editPhase": "editPhase", 
+		"click button.deleteTask": "deleteTask",
+		"click button.editTask": "editTask"
 	}, 
 
 	initialize: function() {
@@ -12,6 +14,12 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "add", this.addTask); 
 		this.listenTo(this, "addTask", this.render)
 		this.collection.fetch();
+
+		var that = this;
+		this.model.fetch();
+		this.model.tasks().each(function(task){
+			that.addTask(task);
+		});
 	},
 
 	addTask: function(task) {
@@ -34,6 +42,33 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 		return this;
 	},
 
+	deleteTask: function(event) {
+		event.preventDefault();
+		var taskID = event.currentTarget.dataset.id;
+		var taskToDelete = this.model.tasks().get({id: taskID});
+		taskToDelete.destroy();
+		
+		var that = this;
+		taskToDelete.fetch({
+			success: function () {
+				that.render;
+			}
+		});
+	},
+
+	editTask: function(event) {
+		$(event.target).toggleClass('hidden');
+		var taskID = event.currentTarget.dataset.id;
+		var taskToEdit = this.model.tasks().get({id: taskID});
+
+		var editTaskView = new FinalApp.Views.TaskEdit({
+			model: taskToEdit,
+			collection: this.model.collection
+		});
+
+		this.$el.find('#task-edit').append(editTaskView.render().$el);
+	},
+
 	newTask: function(event) {
 		$(event.target).toggleClass('hidden');
 		var newTaskView = new FinalApp.Views.TasksNew({
@@ -44,7 +79,18 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 		this.$el.find('#tasks-new').append(newTaskView.render().$el);
 	}, 
 
-	destroyPhase: function(event) {
+	displayPhase: function() {
+		$(event.target).toggleClass('hidden');
+		debugger;
+		var phaseShow = new FinalApp.Views.PhaseShow({
+			model: this.model, 
+			collection: this.model.collection
+		});
+
+		this.$el.find('#phaseShow').append(phaseShow.render().$el);
+	},
+
+	deletePhase: function(event) {
 		event.preventDefault();
 		this.model.destroy();
 	}, 

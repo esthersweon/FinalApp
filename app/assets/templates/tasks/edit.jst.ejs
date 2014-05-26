@@ -1,31 +1,28 @@
 <br>
-<form id="taskform">
+<form id="taskform" role="form">
   <input
     type="hidden"
     id="task_phase_id"
     name="task[phase_id]"
     value="<%= phaseID %>">
 
+  <div class="form-group">
     <input
       type="text"
       id="task_title"
       name="task[title]"
       placeholder="task title"
       value="<%= task.escape("title")%>">
-  <br>
+  </div>
 
-  <label>
-    Task Status: 
+  <div class="form-group">
     <select id="task_status" name="task[status]">
         <option selected value="Incomplete">Incomplete</option>
         <option value="Complete">Complete</option>
     </select>
-  </label>
-  <br>
+  </div>
 
-  <label>
-    Delegate (optional):
-
+  <div class="form-group">
     <select
       id="task_delegate"
       name="task[member_id]">
@@ -36,8 +33,8 @@
           </option>
         <% }) %>
     </select>
-  </label>
-  <br>
+  </div>
 
-  <input type="submit">
-</form
+  <input type="submit" value="&#10003">
+  <button class="cancel">X</button>
+</form>
