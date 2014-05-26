@@ -7,15 +7,15 @@
 	</div>
 
 	<div class= "col-content">
-	<h4>||   at a glance   ||</h4>
+	<a href="#"><h4>||   at a glance   ||</h4></a>
 	<ul>
-		<li><strong>total projects</strong> - <%= projects.length %></li>
-		<li><strong>total members</strong> - <%= members.length %></li>
+		<li><strong># projects</strong> - <%= projects.length %></li>
+		<li><strong># members</strong> - <%= members.length %></li>
 	</ul>
 	</div>
 
 	<div class= "col-longer">
-	<h4>||   team members   ||</h4>
+	<a href="#/members"><h4>||   team members   ||</h4></a>
 
 	<ul>
 	<% members.each (function(member) { %>
@@ -27,7 +27,7 @@
 	</div>
 
 	<div class= "col-content">
-	<h4>||   team projects   ||</h4>
+	<a href="#/projects"><h4>||   team projects   ||</h4></a>
 
 	<ul>
 	<% projects.each (function(project) { %>

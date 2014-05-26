@@ -32,6 +32,6 @@ FinalApp.Views.MemberForm = Backbone.View.extend({
 
 	cancel: function(event) {
 		event.preventDefault();
-		Backbone.history.navigate("", { trigger: true });
+		Backbone.history.navigate("#/members", { trigger: true });
 	}
 })

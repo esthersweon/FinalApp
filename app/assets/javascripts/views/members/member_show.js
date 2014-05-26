@@ -11,10 +11,16 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addTask);
 		this.listenTo(this, "addTask", this.render);
-		this.collection.fetch();
+		var that = this;
+		this.collection.fetch({
+			success: function() {
+				this.model.tasks().each(function(task){
+					that.addTask(task);
+				});
+			}
+		});
 		
 	},
-
 
 	addTask: function(task) {
 		var taskView = new FinalApp.Views.MemberTasksShow({
