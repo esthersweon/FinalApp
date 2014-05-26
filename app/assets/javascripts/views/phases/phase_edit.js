@@ -21,7 +21,7 @@ FinalApp.Views.PhaseEdit = Backbone.View.extend({
 		var attrs = $(event.target.form).serializeJSON();
 		this.model.set(attrs);
 		this.model.save();
-		this.collection.trigger('add');
+		this.collection.trigger('add', this.model);
 	}, 
 
 	cancel: function(event) {

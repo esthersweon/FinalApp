@@ -23,6 +23,7 @@ FinalApp.Views.TaskEdit = Backbone.View.extend({
 		var attrs = $(event.target.form).serializeJSON().task;
 		this.model.set(attrs);
 		this.model.save();
+		this.collection.trigger('sync');
 	}, 
 
 	cancel: function(event) {

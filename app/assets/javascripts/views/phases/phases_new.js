@@ -32,8 +32,8 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
         		Backbone.history.navigate("#projects/" + phases.project.attributes.id, { trigger: true });
       		}, 
       		error: function() {
-
-      		}
+      		},
+      		wait: true
     	});	
 	}, 
 
