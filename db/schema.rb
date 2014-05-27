@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20140523204448) do
     t.integer  "phase_id",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "member_id"
+    t.integer  "member_id",                         null: false
     t.text     "status",     default: "Incomplete", null: false
   end
 
