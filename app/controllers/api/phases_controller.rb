@@ -7,7 +7,7 @@ module Api
 
     def show
       @phase = Phase.find(params[:id])
-      @tasks = @phase.tasks
+      @tasks = Task.where(:phase_id => @phase.id)
       render "api/phases/show"
     end
 

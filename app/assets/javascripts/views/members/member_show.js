@@ -7,12 +7,11 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	initialize: function() {
-		console.log('view initalized')
 		// this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addTask);
 		// this.listenTo(this, "addTask editMember", this.render);
-		var that = this;
+		// var that = this;
 		this.collection.fetch();
 		
 	},
@@ -25,7 +24,6 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	render: function() {
-		console.log('render called')
 		this.removeSubviews();
 
 		var renderedContent = this.template({

@@ -12,7 +12,7 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addPhase);
 		this.listenTo(this, "addPhase", this.render)
-
+		this.collection.fetch();
 	},
 
 	addPhase: function(phase){
