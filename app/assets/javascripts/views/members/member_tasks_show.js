@@ -8,7 +8,7 @@ FinalApp.Views.MemberTasksShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.html(renderedContent);
-
+		console.log(this.$el.html())
 		return this;
 	}
 });

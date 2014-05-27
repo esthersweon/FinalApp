@@ -7,10 +7,11 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	initialize: function() {
-		this.listenTo(this.model, "sync", this.render);
+		console.log('view initalized')
+		// this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addTask);
-		this.listenTo(this, "addTask editMember", this.render);
+		// this.listenTo(this, "addTask editMember", this.render);
 		var that = this;
 		this.collection.fetch();
 		
@@ -24,18 +25,18 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	render: function() {
+		console.log('render called')
 		this.removeSubviews();
-
-		var that = this;
-		this.model.tasks().each(function(task){
-			that.addTask(task);
-		});
 
 		var renderedContent = this.template({
 			member: this.model
 		});
-
 		this.$el.html(renderedContent);
+
+		var that = this;
+		this.collection.each(function(task){
+			that.addTask(task);
+		});
 
 		this.attachSubviews();
 

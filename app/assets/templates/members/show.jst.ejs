@@ -13,13 +13,15 @@
 	<li><strong>role</strong> - <%= member.escape("role") %></li>
 	<li><strong>bio</strong> - <%= member.escape("bio")%></li>
 	</ul>
-	<br><br>
-	<h4>||   member actions   ||</h4>
-	<ul>
-		<li><button class="editMember">edit member</button></li>
-		<li><button class="destroyMember">delete member</button></li>
-		<li><a href="#/members">back to members</a></li>
+	<button class="editMember">edit member</button>
+	<button class="destroyMember">delete member</button>
 	</ul>
+
+	<br>
+
+	<h4><a href="#/members">back to members</a></h4>
+
+	<br>
 	
 	<div id="member-edit">
 	</div>

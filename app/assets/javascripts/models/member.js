@@ -1,5 +1,5 @@
 FinalApp.Models.Member = Backbone.Model.extend({
-	urlRoot: "api/members", 
+	urlRoot: "api/members",
 
 	tasks: function() {
 		if(!this._tasks){

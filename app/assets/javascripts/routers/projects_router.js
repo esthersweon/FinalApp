@@ -73,7 +73,7 @@ FinalApp.Routers.Projects = Backbone.Router.extend({
 			model: member, 
 			collection: member.tasks()
 		});
-		member.tasks().fetch();
+		//member.tasks().fetch();
 		this._swapView(memberShowView);
 	},
 

@@ -27,15 +27,17 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	render: function() {
 		this.removeSubviews();
 
-		var that = this;
-		this.model.tasks().each(function(task){
-			that.addTask(task);
-		});
-
 		var renderedContent = this.template({
 			phase: this.model, 
 			tasks: this.model.tasks()
 		});
+
+		var that = this;
+		this.collection.each(function(task){
+			that.addTask(task);
+		});
+
+
 
 		this.$el.html(renderedContent);
 
