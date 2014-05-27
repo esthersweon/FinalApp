@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".pull-me").click(function() {
-        $(".panel").slideToggle("slow");
+	$('#phase-items h5').click(function() {
+      $('.sub-nav').toggleClass('invisible');
     });
 })

@@ -97,11 +97,13 @@ div#content {
   overflow-x: scroll;
 }
 
-
 .phase {
-  width: 700px;
+  width: 500px;
 }
 
+div#long-phases {
+  float: center;
+}
 
 nav.phase {
   line-height: 1.5;
@@ -111,10 +113,10 @@ nav.phase {
      -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
           box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
- 
+
 #phase-items {
   background: #fff;
-  width: 1000px; 
+  width: 500px; 
 }
 
 #phase-items h5 {
@@ -142,7 +144,7 @@ nav.phase {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceeddc', endColorstr='#006d2f',GradientType=0 ); /* IE6-9 */
 }
 
-#phase-items ul {
+.sub-nav {
   background: #fff;
   font-size: 13px;
   line-height: 30px;
@@ -153,8 +155,8 @@ nav.phase {
   text-decoration: none;
   color: gray;
   display: block;
-  width: 1000px;
-  height: 0px; /*Collapses the menu*/
+  width: 500px;
+  height: auto;
   list-style-type: none;
   overflow: hidden;
   padding: 0px;
@@ -166,10 +168,10 @@ nav.phase {
           transition: height 1s ease;
 }
 
-#phase-items:hover ul {
-  height: auto;
+.invisible {
+  display: none;
 }
 
-div#long-phases {
-  float: center;
-}
+
+
+
