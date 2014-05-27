@@ -2,9 +2,9 @@
 <li class="task">
 	<strong><%= task.escape("title") %></strong> - <%= task.escape("status") %>
 	<br>
-	<strong>project</strong> - 
+	<strong>project</strong> - <%= task.escape("project_title") %>
 	<br>
-	<strong>phase</strong> - 
+	<strong>phase</strong> - <%= task.escape("phase_title") %>
 	<br>
 	<div id="task-edit"></div>
 </li>

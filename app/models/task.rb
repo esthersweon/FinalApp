@@ -16,4 +16,5 @@ class Task < ActiveRecord::Base
 
 	belongs_to :phase, inverse_of: :tasks
 	belongs_to :member, inverse_of: :tasks
+	has_one :project, through: :phase
 end

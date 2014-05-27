@@ -11,9 +11,7 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addTask);
 		// this.listenTo(this, "addTask editMember", this.render);
-		// var that = this;
-		debugger;
-		this.collection.fetch();
+		// this.collection.fetch();
 		
 	},
 
