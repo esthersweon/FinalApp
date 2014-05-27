@@ -1,10 +1,12 @@
 <br>
 <li class="task">
 	<strong><%= task.escape("title") %></strong><br>
-	<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> - <%= task.escape("phase_title") %>
 	<br>
-	status - <%= task.escape("status") %>
-	<br>
+	status - <%= task.escape("status") %><br>
+	||   <a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a>- <%= task.escape("phase_title") %>   ||
+	<br><br>
+	<button class="editTask" data-id=<%= task.id%>>edit task</button>
+	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
 
 	<div id="task-edit"></div>
 </li>

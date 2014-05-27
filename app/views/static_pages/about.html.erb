@@ -7,13 +7,12 @@
 
 <div class= "col-longest">
 <h2>||   what we do   ||</h2>
-<p>making collaboration and teamwork stream-lined and easy -- both in the personal and professional spheres.</p>
+<p>making collaboration stream-lined -- both in the personal and professional spheres.</p>
 
 <br>
 <h2>||   how we work   ||</h2>
-<p>with a pyramid team account, collaborating with team members becomes effortless and efficient. </p>
 	<ol>
-		<li>sign in (new to pyramid?)</li>
+		<li><%= link_to "sign in", new_session_url %> or <%= link_to "sign up", new_user_url %></li>
 		<li>create a roster of teammates</li>
 		<li>break team projects down into phases</li>
 		<li>add tasks for each project phase</li>
@@ -21,15 +20,5 @@
 	</ol>
 </div>
 
-
-</div>
-
-<div class="row">
-	<div class= "col-content">
-	<%if !current_user%>
-	<%= link_to "||   sign in   ||", new_session_url %><br>
-	<%= link_to "||   new to pyramid?   ||", new_user_url %><br>
-	<% end %>
-</div>
 </div>
 </div>
