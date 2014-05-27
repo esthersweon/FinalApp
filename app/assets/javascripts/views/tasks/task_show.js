@@ -10,7 +10,6 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 	},
 
 	render: function() {
-		debugger;
 		var member = this.collection.get(this.model.attributes.member_id);
 
 		var renderedContent = this.template({
