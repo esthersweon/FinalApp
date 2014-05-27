@@ -1,12 +1,9 @@
 <br>
 <li class="task">
-	<span><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %>
-	<br>
-	<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>
-	<br>
+	<span><strong><%= task.escape("title") %></strong><br>
+	<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>, <%= task.escape("status") %><br>
 	<button class="editTask" data-id=<%= task.id%>>edit task</button>
 	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
-	<br>
 	<div id="task-edit"></div>
 	</span>
 </li>

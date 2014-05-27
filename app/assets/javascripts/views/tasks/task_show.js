@@ -7,9 +7,11 @@ FinalApp.Views.TaskShow = Backbone.CompositeView.extend({
 
 	initialize: function() {
 		this.listenTo(this.model, "sync remove", this.render)
+		console.log('Im a new show view')
 	},
 
 	render: function() {
+		// alert('rendering')
 		var member = this.collection.get(this.model.attributes.member_id);
 
 		var renderedContent = this.template({

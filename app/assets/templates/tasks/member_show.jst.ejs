@@ -1,5 +1,6 @@
 <br>
 <li class="task">
+	<span>
 	<strong><%= task.escape("title") %></strong><br>
 	<br>
 	status - <%= task.escape("status") %><br>
@@ -7,6 +8,5 @@
 	<br><br>
 	<button class="editTask" data-id=<%= task.id%>>edit task</button>
 	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
-
-	<div id="task-edit"></div>
+	</span>
 </li>

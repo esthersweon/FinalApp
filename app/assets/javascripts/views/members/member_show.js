@@ -73,7 +73,6 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	editTask: function(event) {
-		debugger;
 		$(event.target).toggleClass('hidden');
 		var taskID = event.currentTarget.dataset.id;
 		var taskToEdit = this.model.tasks().get({id: taskID});

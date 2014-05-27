@@ -1,5 +1,5 @@
 <br>
-<form id="taskform" role="form">
+<form role="form">
   <input
     type="hidden"
     id="task_phase_id"
@@ -12,11 +12,12 @@
       id="task_title"
       name="task[title]"
       placeholder="task title"
-      value="<%= task.escape("title")%>">
+      value="<%= task.escape("title")%>"
+      class="form-control">
   </div>
 
   <div class="form-group">
-    <select id="task_status" name="task[status]">
+    <select id="task_status" name="task[status]" class="form-control">
         <option selected value="Incomplete">Incomplete</option>
         <option value="Complete">Complete</option>
     </select>
@@ -25,7 +26,8 @@
   <div class="form-group">
     <select
       id="task_delegate"
-      name="task[member_id]">
+      name="task[member_id]"
+      class="form-control">
         <% members.each( function(member) { %>
           <option value="<%= member.escape("id")%>">
           <%= member.escape("fname") + " " + member.escape("lname") %>

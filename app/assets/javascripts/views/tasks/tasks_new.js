@@ -25,6 +25,8 @@ FinalApp.Views.TasksNew = Backbone.View.extend({
 
 		this.collection.create(attrs, {
 			success: function(data) {
+				console.log('success')
+				debugger
 				tasks.add(data);
 				Backbone.history.navigate("#/projects/" + tasks.phase.attributes.project_id, { trigger: true });
 			}

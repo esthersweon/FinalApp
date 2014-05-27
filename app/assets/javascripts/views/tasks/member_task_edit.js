@@ -19,16 +19,16 @@ FinalApp.Views.MemberTaskEdit = Backbone.View.extend({
 	},
 
 	update: function(event) {
-		debugger;
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON().task;
 		this.model.set(attrs);
+		debugger
 		this.model.save();
 		this.collection.trigger('sync');
+
 	}, 
 
 	cancel: function(event) {
-		debugger;
 		event.preventDefault();
 		Backbone.history.navigate("#/members/" + this.collection.member.id, { trigger: true });
 	}

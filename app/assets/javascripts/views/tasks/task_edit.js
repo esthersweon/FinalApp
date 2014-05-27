@@ -24,6 +24,7 @@ FinalApp.Views.TaskEdit = Backbone.View.extend({
 		this.model.set(attrs);
 		this.model.save();
 		this.collection.trigger('sync');
+		// this.collection.trigger('add', this.model);
 	}, 
 
 	cancel: function(event) {
