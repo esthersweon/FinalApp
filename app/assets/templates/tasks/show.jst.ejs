@@ -1,6 +1,6 @@
 <br>
 <li class="task">
-	<strong><%= task.escape("title") %></strong> - <%= task.escape("status") %>
+	<span><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %>
 	<br>
 	<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>
 	<br>
@@ -8,4 +8,5 @@
 	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
 	<br>
 	<div id="task-edit"></div>
+	</span>
 </li>

@@ -7,18 +7,12 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	},
 
 	initialize: function() {
-		this.listenTo(this.model, "sync change:fname change:lname change:bio", this.render);
+		this.listenTo(this.model, "sync", this.render);
 		this.listenTo(this.collection, "sync remove", this.render);
 		this.listenTo(this.collection, "add", this.addTask);
-		this.listenTo(this, "addTask", this.render);
+		this.listenTo(this, "addTask editMember", this.render);
 		var that = this;
-		this.collection.fetch({
-			success: function() {
-				this.model.tasks().each(function(task){
-					that.addTask(task);
-				});
-			}
-		});
+		this.collection.fetch();
 		
 	},
 

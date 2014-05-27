@@ -89,6 +89,75 @@ div#content {
   overflow-x: scroll;
 }
 
+
 .phase {
-	width: 400px;
+  width: 200px;
+}
+
+
+nav.phase {
+  line-height: 1.5;
+  margin: 50px auto;
+  width: 250px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+     -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+          box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+ 
+#phase-items {
+  background: #fff;
+  width: 250px; 
+}
+
+#phase-items h5 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 12px;
+  background: black;
+
+  background: #fff; /* Old browsers */
+  background: -moz-linear-gradient(top, #fff 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(44%,#fff), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fff 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+
+#phase-items h5:hover {  
+  background: #cc002c; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fff 0%, #6d0019 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc002c), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #cc002c 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fff 0%,#6d0019 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fff 0%,#6d0019 100%); /* IE10+ */
+  background: linear-gradient(top,  #fff 0%,#6d0019 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc002c', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+
+#phase-items ul {
+  background: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  display: block;
+  width: 200px;
+  height: 0px; /*Collapses the menu*/
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+
+  -webkit-transition: height 1s ease;
+     -moz-transition: height 1s ease;
+       -o-transition: height 1s ease;
+      -ms-transition: height 1s ease;
+          transition: height 1s ease;
+}
+
+#phase-items:hover ul {
+  height: auto;
 }
