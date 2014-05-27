@@ -14,10 +14,6 @@
 
 @import "bootstrap";
 
-#back {
-  float: right;
-}
-
 .sidebar {
   position: fixed;
   top: 51px;
@@ -41,7 +37,6 @@ div.form-container {
   width: 280px;
   margin-left: auto;
   margin-right: auto;
-  float: right;
 }
 
 div.col-picture {

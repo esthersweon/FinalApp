@@ -17,14 +17,20 @@
 			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") %></a> <p><strong>role</strong> - <%= member.escape("role") %></p>
 		</li>
 	<% }) %>
-	<button class="newMember">create a member</button>
 </ul>
+	<br>
+	<button class="newMember">create a member</button>
+	<br>
+	<br>
+	<a href="#"><h4>||   back to dashboard   ||</h4></a>
+
+<br>
+
+
 </div>
 
 	<div class= "col-longest">
-		<a href="#" id="back"><h4>||   back to dashboard   ||</h4></a>
-		<br>
-		<div id="members-new"></div>
+			<div id="members-new"></div>
 	</div>
 
 

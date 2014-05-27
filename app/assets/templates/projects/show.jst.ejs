@@ -12,15 +12,12 @@
 		<li><strong>end date</strong> - <%= project.escape("end_date") %></li>
 		<li><strong>description</strong> - <%= project.escape("description") %></li>
 	</ul>
-
+	<button class="editProject">edit project</button>
+	<button class="destroyProject">destroy project</button>
 	<br><br>
-
-	<h4>||   project actions   ||</h4>
-	<ul>
-		<li><button class="newPhase">add phase</button></li>
-		<li><button class="editProject">edit project</button></li>
-		<li><button class="destroyProject">destroy project</button></li>
-		<li><a href="#/projects">back to projects</a></li>
+	<button class="newPhase">add phase</button>
+	<br><br>
+	<h4><a href="#/projects">||   back to projects   ||</a></h4>
 	</ul>
 		<div id="phases-new"></div>
 		<div id="project-edit"></div>
