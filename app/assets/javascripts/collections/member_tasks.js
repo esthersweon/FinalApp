@@ -1,8 +1,6 @@
 FinalApp.Collections.MemberTasks = Backbone.Collection.extend({
 	model: FinalApp.Models.Task, 
-	url: function() {
-		return "api/members/" + this.member.id
-	}, 
+	url: "api/members",
 	
 	initialize: function (models, options) {
 		this.member = options.member;

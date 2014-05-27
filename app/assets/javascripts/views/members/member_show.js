@@ -3,7 +3,9 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 
 	events: {
 		"click button.editMember": "editMember", 
-		"click button.destroyMember": "destroyMember"
+		"click button.destroyMember": "destroyMember", 
+		"click button.deleteTask": "deleteTask",
+		"click button.editTask": "editTask"
 	},
 
 	initialize: function() {
@@ -54,6 +56,34 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 		event.preventDefault();
 		this.model.destroy();
 		Backbone.history.navigate("#/members", { trigger: true });
-	}
+	}, 
+
+	deleteTask: function(event) {
+		event.preventDefault();
+		var taskID = event.currentTarget.dataset.id;
+		var taskToDelete = this.collection.get({id: taskID});
+		taskToDelete.url = this.collection.url() + "/" + taskToDelete.id;
+		
+		var that = this;
+		taskToDelete.destroy({
+			success: function () {
+				that.collection.remove(taskToDelete);
+			}
+		});
+	},
+
+	editTask: function(event) {
+		debugger;
+		$(event.target).toggleClass('hidden');
+		var taskID = event.currentTarget.dataset.id;
+		var taskToEdit = this.model.tasks().get({id: taskID});
+
+		var editTaskView = new FinalApp.Views.MemberTaskEdit({
+			model: taskToEdit,
+			collection: this.collection
+		});
+
+		this.$el.find('#task-edit').append(editTaskView.render().$el);
+	},
 
 });
