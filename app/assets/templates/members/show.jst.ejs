@@ -2,36 +2,36 @@
 
 	<div class="row">
 
-	<div class= "col-picture">
+	<div class= "col-content">
 	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
 	</div>
 
-	<div class= "col-content">
+	<div class= "col-longest">
 	<h4>||   <%= member.escape("fname") + " " + member.escape("lname")%>   ||</h4>
 
 	<ul>
 	<li><strong>role</strong> - <%= member.escape("role") %></li>
 	<li><strong>bio</strong> - <%= member.escape("bio")%></li>
-	
-	</div>
-
-	<div class= "col-longer">
-		<h4>||   assigned tasks   ||</h4>
-		<ul id="tasks">
-		</ul>
-	</div>
-
-	<div class= "col-content">
+	</ul>
+	<br><br>
 	<h4>||   member actions   ||</h4>
 	<ul>
 		<li><button class="editMember">edit member</button></li>
 		<li><button class="destroyMember">delete member</button></li>
 		<li><a href="#/members">back to members</a></li>
 	</ul>
-		<div id="member-edit">
-		</div>
+	
+	<div id="member-edit">
+	</div>
 		
 	</div>
+
+	<div class= "col-content">
+		<h4>||   assigned tasks   ||</h4>
+		<ul id="tasks">
+		</ul>
+	</div>
+
 
 	</div>
 </div>

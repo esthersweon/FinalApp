@@ -2,20 +2,20 @@
 
 	<div class="row">
 
-	<div class= "col-picture">
+	<div class= "col-content">
 	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
 	</div>
 
 	<div class= "col-content">
-	<a href="#"><h4>||   at a glance   ||</h4></a>
+	<h4>||   at a glance   ||</h4>
 	<ul>
 		<li><strong># projects</strong> - <%= projects.length %></li>
 		<li><strong># members</strong> - <%= members.length %></li>
 	</ul>
 	</div>
 
-	<div class= "col-longer">
-	<a href="#/members"><h4>||   team members   ||</h4></a>
+	<div class= "col-content">
+	<h4>||   team members   ||</h4>
 
 	<ul>
 	<% members.each (function(member) { %>
@@ -27,7 +27,7 @@
 	</div>
 
 	<div class= "col-content">
-	<a href="#/projects"><h4>||   team projects   ||</h4></a>
+	<h4>||   team projects   ||</h4>
 
 	<ul>
 	<% projects.each (function(project) { %>

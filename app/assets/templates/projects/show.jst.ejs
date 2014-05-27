@@ -2,26 +2,19 @@
 
 <div class="row">
 
-	<div class= "col-picture">
+	<div class= "col-content">
 	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
 	</div>
 
-	<div class= "col-longer">
+	<div class= "col-content">
 	<h4>||   <%= project.escape("title") %>   ||</h4>
 	<ul>
 		<li><strong>end date</strong> - <%= project.escape("end_date") %></li>
 		<li><strong>description</strong> - <%= project.escape("description") %></li>
 	</ul>
 
-	</div>
+	<br><br>
 
-	<div class= "col-longer">
-	<h4>||   project phases   ||</h4>
-	<ol id="phases">
-	</ol>
-	</div>
-
-	<div class= "col-shorter">
 	<h4>||   project actions   ||</h4>
 	<ul>
 		<li><button class="newPhase">add phase</button></li>
@@ -34,14 +27,17 @@
 
 		<br><br>
 		<br><br>
-		
+
 	</div>
 
-</div>
+<div id="long-phases">
 
-<div class="row">
-	<div id="phaseShow">
+	<div class= "col-longest">
+	<h4>||   project phases   ||</h4>
+	<ol id="phases">
+	</ol>
 	</div>
+
 </div>
 
 </div>
