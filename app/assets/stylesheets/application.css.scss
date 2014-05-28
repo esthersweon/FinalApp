@@ -14,6 +14,33 @@
 
 @import "bootstrap";
 
+table {
+  text-align: right;
+}
+
+th {
+  text-align: right;
+  font-size: 15px;
+}
+
+.btn-edit {
+color: #fff;
+background-color: #f0ad4e;
+border-color: #eea236;
+}
+
+.btn-create {
+color: #fff;
+background-color: #5bc0de;
+border-color: #46b8da;
+}
+
+.btn-danger {
+color: #fff;
+background-color: #d9534f;
+border-color: #d43f3a;
+}
+
 .sidebar {
   position: fixed;
   top: 51px;
@@ -29,8 +56,20 @@
 }
 
 .col-sm-4 {
+  text-align: center;
+  /*border: 1px solid;*/
+  height: 100%;
+}
+
+.col-sm-3 {
+  text-align: center;
+  height: 100%;
+}
+
+.col-sm-5 {
+  text-align: center;
   border: 1px solid;
-  text-align: right
+  height: 100%;
 }
 
 .container {
@@ -102,8 +141,9 @@ div.col-longest {
   background-color: transparent;
 }
 
-.row {
+.row#dashboard {
   background-color: transparent;
+  border: 1px solid;
 }
 
 #content {

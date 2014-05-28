@@ -8,7 +8,7 @@
 	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)<br>
 <% } %>
 
-	<button class="editTask" data-id=<%= task.id%>>edit task</button>
-	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
+	<button id="editTask" class="btn btn-edit" data-id=<%= task.id%>>edit task</button>
+	<button id="deleteTask" class="btn btn-danger" data-id=<%= task.id%>>delete task</button>
 	<div id="task-edit"></div>
 </li>

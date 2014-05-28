@@ -1,11 +1,11 @@
 FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 	template: JST['phases/show'], 
 	events: {
-		"click button.addTask": "newTask", 
-		"click button.deletePhase": "deletePhase", 
-		"click button.editPhase": "editPhase", 
-		"click button.deleteTask": "deleteTask",
-		"click button.editTask": "editTask"
+		"click button#addTask": "newTask", 
+		"click button#deletePhase": "deletePhase", 
+		"click button#editPhase": "editPhase", 
+		"click button#deleteTask": "deleteTask",
+		"click button#editTask": "editTask"
 	}, 
 
 	initialize: function() {

@@ -2,9 +2,9 @@ FinalApp.Views.ProjectShow = Backbone.CompositeView.extend({
 	template: JST['projects/show'],
 
 	events: {
-		"click button.destroyProject": "destroyProject", 
-		"click button.newPhase": "newPhase", 
-		"click button.editProject": "editProject"
+		"click button#destroyProject": "destroyProject", 
+		"click button#newPhase": "newPhase", 
+		"click button#editProject": "editProject"
 	},
 
 	initialize: function() {

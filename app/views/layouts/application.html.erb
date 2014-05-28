@@ -48,13 +48,17 @@
             <li><a href="/#projects">team projects</a></li>
           </ul>
         </div>
-        <!-- <div class="col main"></div> -->
+        <div class="col main">
+          <%= yield %>
+        </div>
       </div>
     </div>
+  <% else %>
+    <div class="col main">
+      <%= yield %>
+    </div>
   <% end %>
-  
 
-<%= yield %>
 
 </body>
 </html>

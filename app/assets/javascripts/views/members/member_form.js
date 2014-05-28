@@ -18,8 +18,9 @@ FinalApp.Views.MemberForm = Backbone.View.extend({
 
 	submit: function(event) {
 		event.preventDefault();
-		var attrs = $(event.target.form).serializeJSON();
+		var attrs = $(event.target.form).serializeJSON().member;
 		var members = this.collection;
+		debugger;
 
 		this.collection.create(attrs, {
 			wait: true,

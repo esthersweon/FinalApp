@@ -1,35 +1,51 @@
 <div class="container">
 
-	<div class="row">
+<div class="row">
 
-	<div class= "col-content">
-		<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
-	</div>
+<div class="col-sm-2"></div>
 
-	<div class= "col-content">
-		<h4>||   at a glance   ||</h4>
+<div class="col-sm-6">
+	<table class="table">
 
-		<ul>
-			<li><strong># projects</strong> - <%= projects.length %><p></p></li>
-			<% projects.each (function(project) { %>
-				<li class="project">
-					<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
-					<p><strong>end date - </strong><%= project.escape("end_date")%></p>
-				</li>
-			<% }) %>
-		
-		</ul>
-		<br>
-		<button class="newProject">create a project</button>
-		<br>
-		<br>
-		<a href="#"><h4>||   back to dashboard   ||</h4></a>
-	</div>
+	<thead><tr>
+		<th>||   title   ||</th>
+		<th>||   description   ||</th>
+		<th>||   date   ||</th>
+	</tr></thead>
+	
+	<tbody>
+	
+	<% projects.each (function(project) { %>
+	<tr>
+	<td>
+		<a href="#/projects/<%= project.id %>"><strong><%= project.escape("title") %></strong></a>
+	</td>
+	<td>
+		<%= project.escape("description")%>
+	</td>
+	<td>
+		<%= project.escape("end_date")%>
+	</td>
+	</tr>
+	<% }) %>
+	<tr>
+	</tr>
 
-	<div class= "col-longest">
-		<br>
-		<div id="projects-new"></div>
-	</div>
+	</tbody>
+	</table>
+</div>
 
-	</div>
+<div class= "col-sm-1"></div>
+
+<div class= "col-sm-3">
+	<a href="#"><h4>||   back to dashboard   ||</h4></a>
+	<br><br>
+	<button id="newProject" class="btn btn-create"><span class="glyphicon glyphicon-list-alt"></span> create project</button>
+	<div id="projects-new"></div>
+</div>
+
+<div class= "col-sm-1"></div>
+
+
+</div>
 </div>

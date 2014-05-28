@@ -2,7 +2,7 @@ FinalApp.Views.ProjectsIndex = Backbone.View.extend({
 	template: JST['projects/index'],
 
 	events: {
-		"click button.newProject": "newProject"
+		"click button#newProject": "newProject"
 	},
 
 	initialize: function() {

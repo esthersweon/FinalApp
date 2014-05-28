@@ -2,10 +2,7 @@
 <div class="container">
 <div class="row">
 
-<div class= "col-sm-4">
-</div>
-
-<div class= "col-sm-4">
+<div class= "col-sm-8">
 </div>
 
 <div class="col-sm-4">
@@ -14,14 +11,15 @@
 	esther.s.weon@gmail.com</li>
 	<br>
 	<li><strong>office</strong> -<br>
-	App Academy | 1061 Market Street <br>
+	<em>App Academy</em><br>
+	1061 Market Street <br>
 	San Francisco, CA 94102 </li>
 </ul>
 
 <br>
 <%if !current_user%>
-	<%= link_to "||   sign in   ||", new_session_url %><br>
-	<%= link_to "||   new to pyramid?   ||", new_user_url %><br>
+	<%= link_to "sign in   |", new_session_url %>
+	<%= link_to "|   new to pyramid?", new_user_url %>
 <% end %>
 
 </div>

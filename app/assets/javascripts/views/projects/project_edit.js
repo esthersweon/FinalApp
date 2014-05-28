@@ -1,6 +1,7 @@
 FinalApp.Views.ProjectEdit = Backbone.View.extend({
 	events: {
-		'click input[type="submit"]': "update"
+		'click input[type="submit"]': "update", 
+		'click button.cancel': "cancel"
 	}, 
 
 	template: JST['projects/edit'], 
@@ -21,5 +22,10 @@ FinalApp.Views.ProjectEdit = Backbone.View.extend({
 		this.model.set(attrs);
 		this.model.save();
 		this.collection.trigger('add');
+	}, 
+
+	cancel: function(event) {
+		event.preventDefault();
+		Backbone.history.navigate("#/projects/" + this.model.id, { trigger: true });
 	}
 })

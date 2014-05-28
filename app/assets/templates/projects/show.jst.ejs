@@ -2,39 +2,48 @@
 
 <div class="row">
 
-	<div class= "col-content">
-	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
-	</div>
+<div class="col-sm-2"></div>
 
-	<div class= "col-content">
-	<h4>||   <%= project.escape("title") %>   ||</h4>
-	<ul>
-		<li><strong>end date</strong> - <%= project.escape("end_date") %></li>
-		<li><strong>description</strong> - <%= project.escape("description") %></li>
-	</ul>
-	<button class="editProject">edit project</button>
-	<button class="destroyProject">destroy project</button>
-	<br><br>
-	<button class="newPhase">add phase</button>
-	<br><br>
-	<h4><a href="#/projects">||   back to projects   ||</a></h4>
-	</ul>
-		<div id="phases-new"></div>
-		<div id="project-edit"></div>
-	</div>
+<div class="col-sm-3">
+	<table class="table">
 
-<div id="long-phases">
+	<thead>
+	<tr>
+		<h4>||   <%= project.escape("title") %>   ||</h4>
+	</tr></thead>
 
-	<div class= "col-longest">
-	<h4>||   project phases   ||</h4>	
+	<tbody>
+	<tr><td>
+		<strong>end date</strong> 
+		<p><%= project.escape("end_date") %></p>
+	</tr></td>
+	<tr><td>
+		<strong>description</strong>
+		<p><%= project.escape("description") %></p>
+	</tr></td>
+
+	</tbody>
+	</table>
 	
-	<div class="panel-group" id="phases">
-	  
-	</div>
-		
-	</div>
-	<!-- <div id="phases">
-	</div> -->
+	<button id="editProject" class="btn btn-edit"><span class="glyphicon glyphicon-pencil"></span> edit project</button>
+	<div id="project-edit"></div><br>
+	<button id="destroyProject" class="btn btn-danger">delete project</button>
+	<br><br>
+	<h5><a href="#/projects">||   back to projects   ||</a></h5>
+
+</div>
+
+<div class="col-sm-2">	
+</div>
+
+<div class= "col-sm-5">
+	<h4>||   project phases   ||</h4>
+	<div class="panel-group" id="phases"></div>
+	<button id="newPhase" class="btn btn-create">add phase</button>
+	<div id="phases-new"></div>
+	<br>
+
+</div>
 
 </div>
 

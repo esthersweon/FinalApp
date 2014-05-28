@@ -2,10 +2,10 @@ FinalApp.Views.MemberShow = Backbone.CompositeView.extend({
 	template: JST['members/show'],
 
 	events: {
-		"click button.editMember": "editMember", 
+		"click button#editMember": "editMember", 
 		"click button.destroyMember": "destroyMember", 
-		"click button.deleteTask": "deleteTask",
-		"click button.editTask": "editTask"
+		"click button#deleteTask": "deleteTask",
+		"click button#editTask": "editTask"
 	},
 
 	initialize: function() {

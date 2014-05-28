@@ -1,43 +1,59 @@
 <div class="container">
 
-	<div class="row">
+<div class="row">
 
-	<div class= "col-content">
-	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
-	</div>
+<div class="col-sm-3"></div>
 
-	<div class= "col-content">
-	<h4>||   at a glance   ||</h4>
-	<ul>
-		<li><strong># projects</strong> - <%= projects.length %></li>
-		<li><strong># members</strong> - <%= members.length %></li>
-	</ul>
-	</div>
+<div class="col-sm-3">
+	<table class="table">
 
-	<div class= "col-content">
-	<h4>||   team members   ||</h4>
-
-	<ul>
-	<% members.each (function(member) { %>
-		<li class="member">
-			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname")%></a>
-		</li>
-	<% }) %>
-	</ul>
-	</div>
-
-	<div class= "col-content">
-	<h4>||   team projects   ||</h4>
-
-	<ul>
-	<% projects.each (function(project) { %>
-		<li class="project">
-			<a href="#/projects/<%= project.id %>"><%= project.escape("title") %></a>
-		</li>
-	<% }) %>
-	</ul>
-	</div>
-
+	<thead><tr>
+		<th>||   team members   ||</th>
+	</tr></thead>
 	
-	</div>
+	<tbody>
+	
+	<% members.each (function(member) { %>
+	<tr>
+	<td>
+		<strong><a href="#/members/<%= member.id %>">
+			<%= member.escape("fname") + " " + member.escape("lname") %>
+		</a></strong>
+	</td>
+	</tr>
+	<% }) %>
+	<tr>
+	</tr>
+
+	</tbody>
+	</table>
+</div>
+
+<div class="col-sm-1"></div>
+
+<div class="col-sm-3">
+	<table class="table">
+
+	<thead><tr>
+		<th>||   projects   ||</th>
+	</tr></thead>
+	
+	<tbody>
+	
+	<% projects.each (function(project) { %>
+	<tr>
+	<td>
+		<strong><a href="#/projects/<%= project.id %>">
+			<%= project.escape("title") %>
+		</a></strong>
+	</td>	
+	</tr>
+	<% }) %>
+
+	</tbody>
+	</table>
+</div>
+<div class="col-sm-2"></div>
+	
+</div>
 </div>

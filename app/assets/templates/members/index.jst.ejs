@@ -2,37 +2,49 @@
 
 	<div class="row">
 
-	<div class= "col-content">
-	<img src="/images/pyramid.jpg" alt="Pyramid" width="200" height="300">
-	</div>
+<div class="col-sm-2"></div>
 
-	<div class= "col-content">
-	<h4>||   at a glance   ||</h4>
+<div class="col-sm-6">
+	<table class="table">
 
-<ul>
-<li><strong># members</strong> - <%= members.length %></li>
-	<p></p>
+	<thead><tr>
+		<th>||   name   ||</th>
+		<th>||   role   ||</th>
+		<th>||   bio   ||</th>
+	</tr></thead>
+	
+	<tbody>
+	
 	<% members.each (function(member) { %>
-		<li class="member">
-			<a href="#/members/<%= member.id %>"><%= member.escape("fname") + " " + member.escape("lname") %></a> <p><strong>role</strong> - <%= member.escape("role") %></p>
-		</li>
+	<tr>
+	<td>
+		<strong><a href="#/members/<%= member.id %>">
+			<%= member.escape("fname") + " " + member.escape("lname") %>
+		</a></strong>
+	</td>
+	<td>
+		<%= member.escape("role") %>
+	</td>
+	<td>
+		<%= member.escape("bio") %>
+	</td>
+
+	</tr>
 	<% }) %>
-</ul>
-	<br>
-	<button class="newMember">create a member</button>
-	<br>
-	<br>
-	<a href="#"><h4>||   back to dashboard   ||</h4></a>
 
-<br>
-
-
+	</tbody>
+	</table>
 </div>
 
-	<div class= "col-longest">
-			<div id="members-new"></div>
-	</div>
 
+<div class= "col-sm-1"></div>
+
+<div class= "col-sm-3">
+	<a href="#"><h4>||   back to dashboard   ||</h4></a>
+	<br><br>
+	<button id="newMember" class="btn btn-create"><span class="glyphicon glyphicon-user"></span> create member</button><br>
+	<div id="members-new"><br></div>
+</div>
 
 </div>
 </div>

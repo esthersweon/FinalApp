@@ -2,12 +2,13 @@
   <div class="panel-heading">
     <h4 class="panel-title">
       <a data-toggle="collapse" data-parent="#accordion" href="#<%= phase.escape("id")%>" >
-        <%= phase.escape("title") %>
-        end date - <%= phase.escape("end_date") %>
+        <strong><%= phase.escape("title") %></strong>
+        <br>
+        <%= phase.escape("end_date") %>
+        <br><br><br>
 
-        <button class="editPhase">edit phase</button>
-        <button class="deletePhase">delete phase</button>     
-        <button class="addTask">add task</button>
+        <button id="editPhase" class="btn btn-edit"><span class="glyphicon glyphicon-pencil"></span> edit phase</button>
+        <button id="deletePhase" class="btn btn-danger">delete phase</button><br>
 
       </a>
     </h4>
@@ -22,7 +23,7 @@
         </div>
       </ul>
 
-      <button class="addTask">add task</button>
+      <button id="addTask">add task</button>
       
       <div id="tasks-new">
       </div>

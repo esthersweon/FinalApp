@@ -2,7 +2,7 @@ FinalApp.Views.MembersIndex = Backbone.View.extend({
 	template: JST['members/index'],
 
 	events: {
-		"click button.newMember": "newMember"
+		"click button#newMember": "newMember"
 	},
 
 	render: function() {
