@@ -28,15 +28,25 @@
   border-right: 1px solid #eee;
 }
 
+.col-sm-4 {
+  border: 1px solid;
+  text-align: right
+}
+
+.container {
+  background-color: transparent;
+}
+
 body {
   text-align: center; 
   background-color: white;
 }
 
-div.form-container {
+.form-container {
   width: 280px;
   margin-left: auto;
   margin-right: auto;
+  background-color: transparent;
 }
 
 div.col-picture {
@@ -53,6 +63,7 @@ div.col-content {
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: transparent;
 }
 
 div.col-project {
@@ -61,6 +72,7 @@ div.col-project {
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: transparent;
 }
 
 div.col-shorter {
@@ -69,6 +81,7 @@ div.col-shorter {
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: transparent;
 }
 
 div.col-longer {
@@ -77,6 +90,7 @@ div.col-longer {
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: transparent;
 }
 
 div.col-longest {
@@ -85,11 +99,17 @@ div.col-longest {
   text-align: left;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: transparent;
 }
 
-div#content {
+.row {
+  background-color: transparent;
+}
+
+#content {
   margin:50px auto;
   width: auto;
+  background-color: transparent;
 
   
   padding: 10px;
@@ -103,7 +123,7 @@ div#content {
 }
 
 html {
-  background: url("/images/pyramid.jpg") no-repeat center center fixed; 
+  background: url("/images/pyramid.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
