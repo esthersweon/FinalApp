@@ -14,12 +14,12 @@ users = User.create([
 	])
 
 members = Member.create([
-		{id: 1, user_id: 1, fname: "Liam", lname: "Meloy", role: "TV Producer", bio: "From Helena, Montana. Aspiring film director and producer."}, 
-		{id: 2, user_id: 1, fname: "Laura", lname: "Cardona", role: "Film Production Office Manager", bio: "From Queens, NY. Aspiring TV showrunner."}, 
-		{id: 3, user_id: 1, fname: "Ian", lname: "Mayberry", role: "Producer's Assistant", bio: "From Bakersfield, CA. Aspiring film producer."}, 
-		{id: 4, user_id: 2, fname: "Patty", lname: "Huang", role: "Team Leader", bio: "Class of '14. Finance major, aspiring entrepreneur."}, 
-		{id: 5, user_id: 2, fname: "Rickie", lname: "Salinas", role: "Team Member", bio: "Class of '15. Accounting major, aspiring start-up founder."}, 
-		{id: 6, user_id: 2, fname: "Michelle", lname: "Roddy", role: "Team Member", bio: "Class of '14. Business administration major, aspiring start-up founder."}, 
+		{id: 1, user_id: 1, fname: "Liam", lname: "Meloy", role: "TV Producer", bio: "From Helena, Montana."}, 
+		{id: 2, user_id: 1, fname: "Laura", lname: "Cardona", role: "Film Production Office Manager", bio: "From Queens, NY."}, 
+		{id: 3, user_id: 1, fname: "Ian", lname: "Mayberry", role: "Producer's Assistant", bio: "From Bakersfield, CA."}, 
+		{id: 4, user_id: 2, fname: "Patty", lname: "Huang", role: "Team Leader", bio: "Class of '14. Finance major."}, 
+		{id: 5, user_id: 2, fname: "Rickie", lname: "Salinas", role: "Team Member", bio: "Class of '15. Accounting major."}, 
+		{id: 6, user_id: 2, fname: "Michelle", lname: "Roddy", role: "Team Member", bio: "Class of '14. Business admin major."}, 
 		{id: 7, user_id: 3, fname: "Shane", lname: "Wey", role: "Roommate", bio: "From Houston, Texas. Private accountant."}, 
 		{id: 8, user_id: 3, fname: "Ben", lname: "Kenney", role: "Roommate", bio: "From DC. Poli-sci student."}, 
 		{id: 9, user_id: 3, fname: "Crystal", lname: "Platas", role: "Roommate", bio: "From Los Angeles. Marketing intern."}

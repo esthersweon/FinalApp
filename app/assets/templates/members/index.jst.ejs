@@ -8,9 +8,9 @@
 	<table class="table">
 
 	<thead><tr>
-		<th>||   name   ||</th>
-		<th>||   role   ||</th>
-		<th>||   bio   ||</th>
+		<th><span class="glyphicon glyphicon-user"></span> members</span> </th>
+		<th></th>
+		<th></th>
 	</tr></thead>
 	
 	<tbody>
@@ -28,20 +28,25 @@
 	<td>
 		<%= member.escape("bio") %>
 	</td>
-
 	</tr>
 	<% }) %>
+	<tr>
+		<td>
+		<h5><a href="#/"><span class="glyphicon glyphicon-chevron-left"></span> back to dashboard</a></h5>
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
 
 	</tbody>
 	</table>
+
 </div>
 
 
 <div class= "col-sm-1"></div>
 
 <div class= "col-sm-3">
-	<a href="#"><h4>||   back to dashboard   ||</h4></a>
-	<br><br>
 	<button id="newMember" class="btn btn-create"><span class="glyphicon glyphicon-user"></span> create member</button><br>
 	<div id="members-new"><br></div>
 </div>

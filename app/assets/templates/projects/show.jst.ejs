@@ -9,7 +9,7 @@
 
 	<thead>
 	<tr>
-		<h4>||   <%= project.escape("title") %>   ||</h4>
+		<h4><span class="glyphicon glyphicon-list-alt"></span> <%= project.escape("title") %></h4>
 	</tr></thead>
 
 	<tbody>
@@ -29,7 +29,7 @@
 	<div id="project-edit"></div><br>
 	<button id="destroyProject" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> delete project</button>
 	<br><br>
-	<h5><a href="#/projects">||   back to projects   ||</a></h5>
+	<h5><a href="#/projects"><span class="glyphicon glyphicon-chevron-left"></span> back to projects</a></h5>
 
 </div>
 
@@ -37,7 +37,7 @@
 </div>
 
 <div class= "col-sm-5">
-	<h4>||   project phases   ||</h4>
+	<h4><span class="glyphicon glyphicon-bookmark"></span> project phases</h4>
 	<div class="panel-group" id="phases"></div>
 	<button id="newPhase" class="btn btn-create"><span class="glyphicon glyphicon-bookmark"></span> add phase</button>
 	<div id="phases-new"></div>

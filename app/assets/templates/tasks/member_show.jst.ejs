@@ -1,17 +1,15 @@
 <br>
-<li class="task">
 	<% if (task.get("status") == "Complete") { %>
-		<mark><strike><strong><%= task.escape("title") %></strong><br>
-		<strong>status</strong> - <%= task.escape("status") %>, 
-		||   <a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a>- <%= task.escape("phase_title") %>   ||</strike></mark>
+		<span class="glyphicon glyphicon-pushpin"> <strike><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
+		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
+		<%= task.escape("phase_title") %></strike>
 		<br><br>
 	<% } else { %>
-		<strong><%= task.escape("title") %></strong><br>
-		<strong>status</strong> - <%= task.escape("status") %>, 
-		||   <a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a>- <%= task.escape("phase_title") %>   ||
+		<span class="glyphicon glyphicon-pushpin">  <strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
+		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
+		<%= task.escape("phase_title") %>
 		<br><br>
 	<% } %>
 	
 	<button id="editTask" class="btn btn-edit" data-id=<%= task.id%>><span class="glyphicon glyphicon-pencil"></span> edit task</button>
 	<button id="deleteTask" class="btn btn-danger" data-id=<%= task.id%>>delete task</button>
-</li>

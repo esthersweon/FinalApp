@@ -4,8 +4,8 @@
       <a data-toggle="collapse" data-parent="#accordion" href="#<%= phase.escape("id")%>" >
         <span class="glyphicon glyphicon-bookmark"></span> <strong><%= phase.escape("title") %></strong>
         <br>
-        <%= phase.escape("end_date") %>
-        <br><br><br>
+        <strong>end date</strong> - <%= phase.escape("end_date") %>
+        <br><br>
 
         <button id="editPhase" class="btn btn-edit"><span class="glyphicon glyphicon-pencil"></span> edit phase</button>
         <button id="deletePhase" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> delete phase</button><br>
@@ -19,6 +19,8 @@
       </div>
 
       <ul class="sub-nav">
+        <h4><strong><span class="glyphicon glyphicon-pushpin"></span> tasks</strong></h4><br>
+
         <div id="tasks">
         </div>
       </ul>
