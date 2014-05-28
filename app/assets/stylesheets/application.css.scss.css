@@ -104,7 +104,6 @@ div#content {
 div#long-phases {
   float: center;
 }
-
 nav.phase {
   line-height: 1.5;
   margin: 50px auto;
@@ -116,7 +115,7 @@ nav.phase {
 
 #phase-items {
   background: #fff;
-  width: 500px; 
+  width: 1000px; 
 }
 
 #phase-items h5 {
@@ -144,7 +143,7 @@ nav.phase {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceeddc', endColorstr='#006d2f',GradientType=0 ); /* IE6-9 */
 }
 
-.sub-nav {
+#phase-items ul {
   background: #fff;
   font-size: 13px;
   line-height: 30px;
@@ -155,8 +154,8 @@ nav.phase {
   text-decoration: none;
   color: gray;
   display: block;
-  width: 500px;
-  height: auto;
+  width: 1000px;
+  height: 0px; /*Collapses the menu*/
   list-style-type: none;
   overflow: hidden;
   padding: 0px;
@@ -168,10 +167,6 @@ nav.phase {
           transition: height 1s ease;
 }
 
-.invisible {
-  display: none;
+#phase-items:hover ul {
+  height: auto;
 }
-
-
-
-
