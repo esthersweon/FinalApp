@@ -39,7 +39,7 @@ end
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem 'unicorn'5rrrt5w3w2  22u71
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -48,7 +48,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development do
-  gem 'annotate', ">=2.6.0"
+ gem 'annotate', ">=2.6.0"
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'debugger'
