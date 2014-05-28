@@ -18,8 +18,11 @@
 
   <div class="form-group">
     <select id="task_status" name="task[status]" class="form-control">
-        <option selected value="Incomplete">Incomplete</option>
-        <option value="Complete">Complete</option>
+        <option value="Incomplete"
+        <%= task.get("status") == "Incomplete" ? 'selected' : '' %>>Incomplete</option>
+        <option value="Complete"
+        <%= task.get("status") == "Complete" ? 'selected' : '' %>>
+        Complete</option>
     </select>
   </div>
 
@@ -29,7 +32,9 @@
       name="task[member_id]"
       class="form-control">
         <% members.each( function(member) { %>
-          <option value="<%= member.escape("id")%>">
+          <option 
+          value="<%= member.escape("id")%>"
+          <%= task.get("member_id") == member.get("id") ? 'selected' : '' %>>
           <%= member.escape("fname") + " " + member.escape("lname") %>
           </option>
         <% }) %>
