@@ -1,28 +1,29 @@
-<img src="/images/pyramid.jpg" alt="Pyramid" width="400" height="550">
+<div id="session">
 
-<div class="form-container">
+	<div class="form-container">
 
-<form action="<%= users_url %>" method="POST" role="form">
-<h2>sign up</h2>
+	<form action="<%= users_url %>" method="POST" role="form">
+	<h2>sign up</h2>
 
-<div class="form-group">
-	<input type="hidden"
-	name="authenticity_token"
-	value="<%= form_authenticity_token%>"
-	>
-</div>
+	<div class="form-group">
+		<input type="hidden"
+		name="authenticity_token"
+		value="<%= form_authenticity_token%>"
+		>
+	</div>
 
-<div class="form-group">
-	<input type="text" name="user[username]" placeholder="team username" class="form-control">
-</div>
+	<div class="form-group">
+		<input type="text" name="user[username]" placeholder="team username" class="form-control">
+	</div>
 
-<div class="form-group">
-	<input type="password" name="user[password]" placeholder="password" class="form-control">
-</div>
+	<div class="form-group">
+		<input type="password" name="user[password]" placeholder="password" class="form-control">
+	</div>
 
-<button type="submit" class="btn btn-default">sign up</button>
-<br><br>
+	<button type="submit" class="btn btn-default">sign up</button>
+	<br><br>
 
-</form>
+	</form>
 
+	</div>
 </div>
