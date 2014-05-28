@@ -1,9 +1,9 @@
 <br>
 <li class="task">
 	<% if (task.get("status") == "Complete") { %>
-		<strike><strong><%= task.escape("title") %></strong><br>
+		<mark><strike><strong><%= task.escape("title") %></strong><br>
 		<strong>status</strong> - <%= task.escape("status") %>, 
-		||   <a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a>- <%= task.escape("phase_title") %>   ||</strike>
+		||   <a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a>- <%= task.escape("phase_title") %>   ||</strike></mark>
 		<br><br>
 	<% } else { %>
 		<strong><%= task.escape("title") %></strong><br>

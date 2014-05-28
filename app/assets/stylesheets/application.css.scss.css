@@ -115,7 +115,7 @@ nav.phase {
 
 #phase-items {
   background: #fff;
-  width: 1000px; 
+  width: 500px; 
 }
 
 #phase-items h5 {
@@ -154,7 +154,7 @@ nav.phase {
   text-decoration: none;
   color: gray;
   display: block;
-  width: 1000px;
+  width: 700px;
   height: 0px; /*Collapses the menu*/
   list-style-type: none;
   overflow: hidden;

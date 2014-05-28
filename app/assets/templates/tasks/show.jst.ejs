@@ -1,9 +1,14 @@
 <br>
 <li class="task">
-	<span><strong><%= task.escape("title") %></strong><br>
-	<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>, <%= task.escape("status") %><br>
+<% if (task.get("status") == "Complete") { %>
+	<mark><strike><strong><%= task.escape("title") %></strong><br>
+	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)</mark></strike></strong><br>
+<% } else { %>
+	<strong><%= task.escape("title") %></strong><br>
+	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)<br>
+<% } %>
+
 	<button class="editTask" data-id=<%= task.id%>>edit task</button>
 	<button class="deleteTask" data-id=<%= task.id%>>delete task</button>
 	<div id="task-edit"></div>
-	</span>
 </li>
