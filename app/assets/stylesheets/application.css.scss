@@ -26,6 +26,24 @@ table {
   text-align: right;
 }
 
+.main {
+  position: relative;
+}
+
+#content {
+  margin:50px auto;
+  width: auto;
+
+  
+  padding: 10px;
+  margin-bottom: 10px;
+  
+  overflow-x: scroll;
+
+  position: fixed;
+  background-color: rgba(0,0,0,0.7)
+}
+
 th {
   text-align: right;
   font-size: 15px;
@@ -157,17 +175,7 @@ div.col-longest {
   border: 1px solid;
 }
 
-#content {
-  margin:50px auto;
-  width: auto;
-  background-color: transparent;
 
-  
-  padding: 10px;
-  margin-bottom: 10px;
-  
-  overflow-x: scroll;
-}
 
 .phase {
   width: 500px;
