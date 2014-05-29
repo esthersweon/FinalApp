@@ -1,12 +1,12 @@
 <div class="member-task">
 <br>
 	<% if (task.get("status") == "Complete") { %>
-		<span class="glyphicon glyphicon-pushpin"> <strike><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
+		<span class="glyphicon glyphicon-pushpin"></span> <strike><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
 		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
 		<%= task.escape("phase_title") %></strike>
 		<br><br>
 	<% } else { %>
-		<span class="glyphicon glyphicon-pushpin">  <strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
+		<span class="glyphicon glyphicon-pushpin"></span> <strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
 		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
 		<%= task.escape("phase_title") %>
 		<br><br>

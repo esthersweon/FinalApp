@@ -2,7 +2,7 @@
 
 <div class="row">
 
-<div class="col-sm-1">
+<div class="col-sm-2">
 </div>
 
 <div class="col-sm-3">
@@ -34,7 +34,7 @@
 <div class="col-sm-1">
 </div>
 
-<div class="col-sm-3">
+<div class="col-sm-2">
 	<table class="table">
 
 	<thead><tr>
@@ -46,9 +46,9 @@
 	<% members.each (function(member) { %>
 	<tr>
 	<td>
-		<strong><a href="#/members/<%= member.id %>">
-			<%= member.escape("fname") + " " + member.escape("lname") %></a>
-		</strong>
+		<a href="#/members/<%= member.id %>">
+			<span class="glyphicon glyphicon-ok"></span></a>
+			<%= member.escape("fname") + " " + member.escape("lname") %>
 	</td>
 	</tr>
 	<% }) %>
@@ -77,9 +77,10 @@
 	<% projects.each (function(project) { %>
 	<tr>
 	<td>
-		<strong><a href="#/projects/<%= project.id %>">
-			<%= project.escape("title") %>
-		</a></strong>
+		<a href="#/projects/<%= project.id %>">
+			<span class="glyphicon glyphicon-ok"></span>
+		</a>
+		<%= project.escape("title") %>
 	</td>	
 	</tr>
 	<% }) %>

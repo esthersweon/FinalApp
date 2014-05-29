@@ -28,6 +28,7 @@ table {
 
 .main {
   position: relative;
+  color: white;
 }
 
 #content {
@@ -41,7 +42,7 @@ table {
   overflow-x: scroll;
 
   position: fixed;
-  background-color: rgba(0,0,0,0.7)
+  background-color: rgba(0,0,0,0.6)
 }
 
 th {
@@ -101,6 +102,10 @@ border-color: #d43f3a;
   height: 100%;
 }
 
+#session {
+  text-align: center
+}
+
 .container {
   background-color: transparent;
 }
@@ -111,10 +116,11 @@ body {
 }
 
 .form-container {
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 30%;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
   background-color: transparent;
+  position: fixed;
 }
 
 div.col-picture {
