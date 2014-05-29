@@ -17,17 +17,17 @@
 header {
   /*position: fixed;*/
   position: relative;
+  font-family: 'Josefin Sans Std Light', sans-serif;
 }
 
 #main-logo {
   width: 90%;
+  right: 5%;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
-  position: fixed;
-  top: 30%; 
-  right: 5%;
-
+  position: absolute;
+  top: 50%; 
 }
 
 .navbar-header {
@@ -45,6 +45,7 @@ table {
 .main {
   position: relative;
   color: white;
+  font-family: 'Josefin Sans Std Light', sans-serif;
 }
 
 #content {
@@ -81,11 +82,16 @@ table {
 
 th {
   text-align: right;
-  font-size: 15px;
+  font-size: 18px;
+  color: white;
 }
 
 td {
   text-align: right;
+}
+
+a {
+  color: #428bca;
 }
 
 .btn-edit {
@@ -122,7 +128,6 @@ border-color: #d43f3a;
 
 .col-sm-4 {
   text-align: center;
-  /*border: 1px solid;*/
   height: 100%;
 }
 
@@ -155,7 +160,7 @@ body {
   margin-right: 0 auto;
   background-color: transparent;
   position: fixed;
-  top: 30%; 
+  top: 20%; 
   right: 35%;
 }
 

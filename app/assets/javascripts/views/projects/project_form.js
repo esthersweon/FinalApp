@@ -1,7 +1,7 @@
 FinalApp.Views.ProjectForm = Backbone.View.extend({
 	events: {
 		'click input[type="submit"]': "submit", 
-		'click button.cancel': "cancel"
+		'click button#cancel': "cancel"
 	}, 
 
 	template: JST['projects/form'], 

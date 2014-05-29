@@ -1,7 +1,7 @@
 FinalApp.Views.PhaseEdit = Backbone.View.extend({
 	events: {
 		'click input[type="submit"]': "update", 
-		'click button.cancel': "cancel"
+		'click button#cancel': "cancel"
 	}, 
 
 	template: JST['phases/edit'], 

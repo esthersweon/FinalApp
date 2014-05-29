@@ -3,7 +3,7 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
 
 	events: {
 		"click input[type='submit']": "submit", 
-		"click button.cancel": "cancel"
+		"click button#cancel": "cancel"
 	}, 
 
 	initialize: function() {

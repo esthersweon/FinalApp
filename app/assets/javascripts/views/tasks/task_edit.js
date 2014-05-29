@@ -1,7 +1,7 @@
 FinalApp.Views.TaskEdit = Backbone.View.extend({
 	events: {
 		'click input[type="submit"]': "update", 
-		"click button.cancel": "cancel"
+		"click button#cancel": "cancel"
 	}, 
 
 	template: JST['tasks/edit'], 

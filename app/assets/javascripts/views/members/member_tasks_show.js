@@ -17,7 +17,7 @@ FinalApp.Views.MemberTasksShow = Backbone.CompositeView.extend({
 	},
 
 	editTask: function(event) {
-		event.preventDefault();
+		$(event.target).toggleClass('hidden');
 		var editTaskView = new FinalApp.Views.MemberTaskEdit({
 			model: this.model,
 			collection: this.model.collection
