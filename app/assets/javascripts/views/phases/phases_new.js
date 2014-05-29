@@ -23,15 +23,18 @@ FinalApp.Views.PhasesNew = Backbone.View.extend({
 
 	submit: function(event) {
 		event.preventDefault();
+		
 		var attrs = $(event.target.form).serializeJSON();
 		var phases = this.collection;
+		debugger;
 
     	this.collection.create(attrs, {
       		success: function (data) {
         		phases.add(data);
         		Backbone.history.navigate("#projects/" + phases.project.attributes.id, { trigger: true });
       		}, 
-      		error: function() {
+      		error: function(response) {
+      			console.log(response)
       		},
       		wait: true
     	});	

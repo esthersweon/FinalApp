@@ -2,7 +2,37 @@
 
 <div class="row">
 
-<div class="col-sm-3"></div>
+<div class="col-sm-1">
+</div>
+
+<div class="col-sm-3">
+	<table class="table">
+	<thead>
+		<tr>
+		<th><span class="glyphicon glyphicon-home"></span> getting started</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>add your <strong><a href="#/members">team members</a></strong></td>
+		</tr>
+		<tr>
+			<td>create your <strong><a href="#/projects">projects</a></strong></td>
+		</tr>
+		<tr>
+			<td>divide your projects<br>
+				into manageable <strong>phases</strong></td>
+		</tr>
+		<tr>
+			<td>create <strong>tasks</strong> for each phase<br>
+				& assign them to team members</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+<div class="col-sm-1">
+</div>
 
 <div class="col-sm-3">
 	<table class="table">
@@ -17,8 +47,8 @@
 	<tr>
 	<td>
 		<strong><a href="#/members/<%= member.id %>">
-			<%= member.escape("fname") + " " + member.escape("lname") %>
-		</a></strong>
+			<%= member.escape("fname") + " " + member.escape("lname") %></a>
+		</strong>
 	</td>
 	</tr>
 	<% }) %>
@@ -32,7 +62,8 @@
 	</table>
 </div>
 
-<div class="col-sm-1"></div>
+<div class="col-sm-1">
+</div>
 
 <div class="col-sm-3">
 	<table class="table">
@@ -60,8 +91,5 @@
 
 	</tbody>
 	</table>
-</div>
-<div class="col-sm-2"></div>
-	
 </div>
 </div>

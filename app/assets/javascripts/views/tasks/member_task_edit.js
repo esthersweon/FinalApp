@@ -22,7 +22,6 @@ FinalApp.Views.MemberTaskEdit = Backbone.View.extend({
 		event.preventDefault();
 		var attrs = $(event.target.form).serializeJSON().task;
 		this.model.set(attrs);
-		debugger
 		this.model.save();
 		this.collection.trigger('sync');
 

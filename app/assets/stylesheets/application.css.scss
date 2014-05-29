@@ -23,6 +23,10 @@ th {
   font-size: 15px;
 }
 
+td {
+  text-align: right;
+}
+
 .btn-edit {
 color: #fff;
 background-color: #f0ad4e;
@@ -68,7 +72,6 @@ border-color: #d43f3a;
 
 .col-sm-5 {
   text-align: center;
-  border: 1px solid;
   height: 100%;
 }
 
