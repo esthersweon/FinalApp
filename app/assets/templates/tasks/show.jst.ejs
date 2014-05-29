@@ -6,11 +6,12 @@
 <% } else { %>
 	<span class="glyphicon glyphicon-pushpin"></span>
 	<strong><%= task.escape("title") %></strong><br>
-	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)<br><br>
+	<%= task.escape("status") %> || <a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a><br><br>
 <% } %>
 
 	<button id="editTask" class="btn btn-edit" data-id=<%= task.id%>><span class="glyphicon glyphicon-pencil"></span>edit task</button>
 	<button id="deleteTask" class="btn btn-danger" data-id=<%= task.id%>><span class="glyphicon glyphicon-trash"></span>delete task</button>
 	<div id="task-edit"></div>
-	<br><br>
+	<br>
 </div>
+<br>

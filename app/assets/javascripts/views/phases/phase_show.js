@@ -66,8 +66,6 @@ FinalApp.Views.PhaseShow = Backbone.CompositeView.extend({
 			collection: this.model.collection
 		});
 
-		debugger;
-
 		this.$el.find('.task-item[data-id="' + taskID + '"] #task-edit').append(editTaskView.render().$el);
 	},
 
