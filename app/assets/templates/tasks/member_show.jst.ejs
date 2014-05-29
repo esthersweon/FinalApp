@@ -1,3 +1,4 @@
+<div class="member-task">
 <br>
 	<% if (task.get("status") == "Complete") { %>
 		<span class="glyphicon glyphicon-pushpin"> <strike><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
@@ -11,5 +12,9 @@
 		<br><br>
 	<% } %>
 	
+	<div id="task-edit"></div>
+	
+	
 	<button id="editTask" class="btn btn-edit" data-id=<%= task.id%>><span class="glyphicon glyphicon-pencil"></span> edit task</button>
 	<button id="deleteTask" class="btn btn-danger" data-id=<%= task.id%>><span class="glyphicon glyphicon-trash"></span> delete task</button>
+</div>
