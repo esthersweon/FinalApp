@@ -21,14 +21,15 @@
 		<strong>description</strong>
 		<p><%= project.escape("description") %></p>
 	</tr></td>
+	<tr><td>
+		<button id="editProject" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-pencil"></span></button>
+	<button id="destroyProject" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-trash"></span></button>
+	</tr></td>
 
 	</tbody>
 	</table>
-	
-	<button id="editProject" class="btn btn-edit"><span class="glyphicon glyphicon-pencil"></span> edit project</button>
-	<button id="destroyProject" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> delete project</button>
-	<br><br><br>
 
+	<br>
 	<div id="project-edit"></div><br><br>
 
 	<h5><a href="#/projects"><span class="glyphicon glyphicon-chevron-left"></span> back to projects</a></h5>
