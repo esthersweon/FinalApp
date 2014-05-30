@@ -10,7 +10,7 @@
 <body>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div id="nav-container">
         <div class="navbar-header">
           <a href="/#"><img src="/images/logo.png" alt="logo" height="50" width="170"></a>
         </div>
@@ -23,7 +23,7 @@
           
           <ul class="nav navbar-nav navbar-right">
             <%if current_user%>
-              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, team <%=current_user.username%><b class="caret"></b></a>
+              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">welcome, team <%=current_user.username%> <b class="caret"></b> </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "log out", session_url, method: :delete %></li>
                 </ul>
@@ -63,7 +63,6 @@
       <%= yield %>
     </div>
   <% end %>
-
 
 </body>
 </html>

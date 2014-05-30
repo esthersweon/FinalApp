@@ -27,7 +27,10 @@ header {
 
 ul {
   padding: 0;
-  
+}
+
+#nav-container {
+  width: 100%;
 }
 
 .btn-sm {
@@ -48,8 +51,8 @@ ul {
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
-  position: absolute;
-  top: 50%; 
+  position: fixed;
+  top: 30%; 
 }
 
 .navbar-header {
@@ -57,7 +60,7 @@ ul {
 }
 
 .nav-sidebar {
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 table {
@@ -68,7 +71,8 @@ table {
   position: absolute;
   color: white;
   font-family: 'Josefin Sans Std Light', sans-serif;
-  top: 100px;
+  top: 80px;
+  bottom: 80px;
 }
 
 #content {
