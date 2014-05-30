@@ -123,6 +123,7 @@ td {
 
 .panel-group .panel {
   background-color: transparent;
+  border-radius: 5px;
 }
 
 .panel-default > .panel-heading {
@@ -137,6 +138,7 @@ ul {
 .task-item {
   border: 1px;
   border-style: solid;
+  border-radius: 5px;
   background: rgba(255,255,255,0.2)
 }
 
@@ -157,7 +159,8 @@ form {
 }
 
 a {
-  color: #428bca;
+  color: #8ECCCC;
+  opacity:0.7;
 }
 
 .btn-sm {
@@ -167,7 +170,6 @@ a {
   border-radius: 3px;
   margin: 3px;
   border: thin solid white;
-  border-radius: 3px;
   color: white;
   background: none;
 }

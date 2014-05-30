@@ -10,7 +10,6 @@
 			<thead><tr>
 				<th><span class="glyphicon glyphicon-user"></span> members</span> </th>
 				<th></th>
-				<th></th>
 			</tr></thead>
 			
 			<tbody>
@@ -20,9 +19,7 @@
 			<td>
 				<strong><a href="#/members/<%= member.id %>">
 					<%= member.escape("fname") + " " + member.escape("lname") %>
-				</a></strong>
-			</td>
-			<td>
+				</a></strong><br>
 				<%= member.escape("role") %>
 			</td>
 			<td>
@@ -32,9 +29,8 @@
 			<% }) %>
 			<tr>
 				<td></td>
-				<td></td>
 				<td>
-				<h5><a href="#/"><span class="glyphicon glyphicon-chevron-left"></span> back to home</a></h5>
+				<a href="#/"><span class="glyphicon glyphicon-chevron-left"></span> home</a>
 				</td>
 			</tr>
 

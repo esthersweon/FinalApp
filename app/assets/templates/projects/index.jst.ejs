@@ -18,10 +18,7 @@
 	<% projects.each (function(project) { %>
 	<tr>
 	<td>
-		<a href="#/projects/<%= project.id %>"><strong><%= project.escape("title") %></strong></a>
-	</td>
-	<td>
-		<%= project.escape("end_date")%>
+		<a href="#/projects/<%= project.id %>"><strong><%= project.escape("title") %></strong></a><br> <%= project.escape("end_date")%>
 	</td>
 	<td>
 		<%= project.escape("description")%>
@@ -30,9 +27,8 @@
 	<% }) %>
 	<tr>
 		<td></td>
-		<td></td>
 		<td>
-		<h5><a href="#/"><span class="glyphicon glyphicon-chevron-left"></span> back to home</a></h5>
+		<a href="#/"><span class="glyphicon glyphicon-chevron-left"></span> home</a>
 		</td>
 	</tr>
 

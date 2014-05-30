@@ -14,15 +14,15 @@ users = User.create([
 	])
 
 members = Member.create([
-		{user_id: 1, fname: "Liam", lname: "Meloy", role: "TV Producer", bio: "From Helena, Montana."}, 
-		{user_id: 1, fname: "Laura", lname: "Cardona", role: "Film Production Office Manager", bio: "From Queens, NY."}, 
-		{user_id: 1, fname: "Ian", lname: "Mayberry", role: "Producer's Assistant", bio: "From Bakersfield, CA."}, 
-		{user_id: 2, fname: "Patty", lname: "Huang", role: "Team Leader", bio: "Class of '14. Finance major."}, 
-		{user_id: 2, fname: "Rickie", lname: "Salinas", role: "Team Member", bio: "Class of '15. Accounting major."}, 
+		{user_id: 1, fname: "Alex", lname: "Cardona", role: "Film Production Office Manager", bio: "From Queens, NY. Aspiring TV showrunner."}, 
+		{user_id: 1, fname: "Ian", lname: "Vitelli", role: "Producer's Assistant", bio: "From Bakersfield, CA. Aspiring TV producer."}, 
+		{user_id: 1, fname: "Liam", lname: "Delman", role: "Film/ TV Producer", bio: "From Helena, Montana. Aspiring feature film director."}, 
+		{user_id: 2, fname: "Rickie", lname: "Lin", role: "Team Member", bio: "Class of '15. Accounting major."}, 
 		{user_id: 2, fname: "Michelle", lname: "Roddy", role: "Team Member", bio: "Class of '14. Business admin major."}, 
-		{user_id: 3, fname: "Shane", lname: "Wey", role: "Roommate", bio: "From Houston, Texas. Private accountant."}, 
-		{user_id: 3, fname: "Ben", lname: "Kenney", role: "Roommate", bio: "From DC. Poli-sci student."}, 
-		{user_id: 3, fname: "Crystal", lname: "Platas", role: "Roommate", bio: "From Los Angeles. Marketing intern."}
+		{user_id: 2, fname: "Patty", lname: "Martinez", role: "Team Leader", bio: "Class of '14. Finance major."}, 
+		{user_id: 3, fname: "Shane", lname: "Salomon", role: "Roommate", bio: "From Houston, Texas. Private accountant."}, 
+		{user_id: 3, fname: "Ben", lname: "Dailey", role: "Roommate", bio: "From DC. Poli-sci student."}, 
+		{user_id: 3, fname: "Crystal", lname: "Waschenfelder", role: "Roommate", bio: "From Los Angeles. Marketing intern."}
 	])
 
 projects = Project.create([

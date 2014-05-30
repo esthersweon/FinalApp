@@ -2,7 +2,7 @@
 <% if (task.get("status") == "Complete") { %>
 	<span class="glyphicon glyphicon-pushpin"></span>
 	<strike><strong><%= task.escape("title") %></strong><br>
-	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)</strike></strong><br>
+	<%= task.escape("status") %> (<a href="#/members/<%= member.escape("id")%>"><%= member.escape("fname") %> <%= member.escape("lname") %></a>)</strike></strong>
 <% } else { %>
 	<span class="glyphicon glyphicon-pushpin"></span>
 	<strong><%= task.escape("title") %></strong><br>
