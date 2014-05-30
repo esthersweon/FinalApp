@@ -58,10 +58,22 @@ header {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.6);
   border-radius: 10px;
   position: fixed;
   top: 35%; 
+  right: 35%;
+}
+
+#demo {
+  border: 1px solid;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  position: fixed;
+  top: 70%; 
   right: 35%;
 }
 
@@ -70,7 +82,7 @@ header {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.6);
   border-radius: 10px;
   position: fixed;
   top: 35%; 
