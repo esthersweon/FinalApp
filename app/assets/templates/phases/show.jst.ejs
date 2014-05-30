@@ -2,26 +2,25 @@
   <div class="panel-heading">
     <h4 class="panel-title">
       <a data-toggle="collapse" data-parent="#accordion" href="#<%= phase.escape("id")%>" >
-        <span class="glyphicon glyphicon-bookmark"></span> <strong><%= phase.escape("title") %></strong>
+        <span class="glyphicon glyphicon-bookmark"></span> <strong><%= phase.escape("title")%></strong>   ||   <%= phase.escape("end_date") %>
       </a>
     </h4>
   </div>
   <div id="<%= phase.escape("id") %>" class="panel-collapse collapse">
     <div class="panel-body">
-      <strong>end date</strong> - <%= phase.escape("end_date") %>
 
       <button id="deletePhase" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-trash"></span></button>
       <button id="editPhase" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-pencil"></span></button>
 
       <br><br>
-      <div id="phase-edit"></div><br><br>
+      <div id="phase-edit"></div><br>
 
       <ul class="sub-nav">
         <div id="tasks">
         </div>
       </ul>
 
-      <button id="addTask" class="btn btn-create"><span class="glyphicon glyphicon-pushpin"></span> add task</button>
+      <button id="addTask" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pushpin"></span> add task</button>
       
       <div id="tasks-new">
       </div>
