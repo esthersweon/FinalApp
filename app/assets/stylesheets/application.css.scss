@@ -15,9 +15,27 @@
 @import "bootstrap";
 
 header {
-  /*position: fixed;*/
-  position: relative;
+  position: fixed;
+  /*position: relative;*/
+  width: 100%;
+  z-index: 1;
   font-family: 'Josefin Sans Std Light', sans-serif;
+}
+
+ul {
+  padding: 0;
+  
+}
+
+.btn-sm {
+  padding: 5px 10px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+margin: 3px;
+border: thin solid white;
+color: white;
+background: none;
 }
 
 #main-logo {
@@ -78,6 +96,7 @@ table {
 .task-item {
   border: 1px;
   border-style: solid;
+  background: rgba(255,255,255,0.2)
 }
 
 th {
@@ -139,10 +158,6 @@ border-color: #d43f3a;
 .col-sm-5 {
   text-align: center;
   height: 100%;
-}
-
-#session {
-  text-align: center
 }
 
 .container {

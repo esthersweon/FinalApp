@@ -8,12 +8,12 @@
   </div>
   <div id="<%= phase.escape("id") %>" class="panel-collapse collapse">
     <div class="panel-body">
-      <strong>end date</strong> - <%= phase.escape("end_date") %><br><br>
+      <strong>end date</strong> - <%= phase.escape("end_date") %>
 
-      <button id="editPhase" class="btn btn-edit"><span class="glyphicon glyphicon-pencil"></span> edit phase</button>
-      <button id="deletePhase" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> delete phase</button>
-      <br><br><br>
+      <button id="deletePhase" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-trash"></span></button>
+      <button id="editPhase" class="btn btn-sm btn-default pull-right"><span class="glyphicon glyphicon-pencil"></span></button>
 
+      <br><br>
       <div id="phase-edit"></div><br><br>
 
       <ul class="sub-nav">
