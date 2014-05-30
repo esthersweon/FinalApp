@@ -1,18 +1,49 @@
 <div class="member-task">
 <br>
 	<% if (task.get("status") == "Complete") { %>
-		<span class="glyphicon glyphicon-pushpin"></span> <strike><strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
+
+	<table class="table">
+	<thead>
+	<tr>
+		<th><span class="glyphicon glyphicon-pushpin"></span> <strike><%= task.escape("title") %></strike></th>
+	</tr></thead>
+
+	<tbody>
+	<tr><td>
+		<%= task.escape("status") %>
+	</tr></td>
+	<tr><td>
 		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
 		<%= task.escape("phase_title") %></strike>
-		<br><br>
+	</tr></td>
+	<tr><td>
+
+	</tbody>
+	</table>
 	<% } else { %>
-		<span class="glyphicon glyphicon-pushpin"></span> <strong><%= task.escape("title") %></strong> - <%= task.escape("status") %><br>
-		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a><br>
-		- <%= task.escape("phase_title") %><br>
+	<table class="table">
+	<thead>
+	<tr>
+		<th><span class="glyphicon glyphicon-pushpin"></span> <%= task.escape("title") %></th>
+	</tr></thead>
+
+	<tbody>
+	<tr><td>
+		<%= task.escape("status") %>
+	</tr></td>
+	<tr><td>
+		<a href="#/projects/<%=task.escape("project_id")%>"><%= task.escape("project_title") %></a> || 
+		<%= task.escape("phase_title") %></strike>
+	</tr></td>
+
 	<% } %>
 	
-	<button id="editTask" class="btn btn-sm btn-default" data-id=<%= task.id%>><span class="glyphicon glyphicon-pencil"></span></button>
-	<button id="deleteTask" class="btn btn-sm btn-default" data-id=<%= task.id%>><span class="glyphicon glyphicon-trash"></span></button><br>
+	<tr><td><button id="editTask" class="btn btn-sm btn-default" data-id=<%= task.id%>><span class="glyphicon glyphicon-pencil"></span></button>
+	<button id="deleteTask" class="btn btn-sm btn-default" data-id=<%= task.id%>><span class="glyphicon glyphicon-trash"></span></button>
+	</tr></td>
+
+	</tbody>
+	</table>
 
 	<div id="task-edit"></div>
 	<br>
