@@ -30,12 +30,7 @@
   </div>
 
   <div class="form-group">
-  <input
-    type="textarea"
-    name="member[bio]"
-    value="<%= member.escape("bio") %>"
-    placeholder="short bio"
-    class="form-control">
+    ​<textarea type="text" name="member[bio]" placeholder="short bio" class="form-control" rows="3" cols="70"><%= member.escape("bio") %></textarea>
   </div>
 
   <input type="submit" class="btn btn-sm btn-default" value="&#10003">
