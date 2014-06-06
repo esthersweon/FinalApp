@@ -19,7 +19,7 @@ var startShepherdTour = function () {
   shepherd.addStep('welcome', {
     text: 'Welcome to Pyramid. We make collabaration stream-lined and efficent-- ' + 
     'in the professional, academic, & personal spheres. If you would prefer to roam our site ' + 
-    'on your own, please feel free to deactivate our site tour below. We hope you enjoy!',
+    'on your own, please feel free to deactivate the site tour below. We hope you enjoy!',
     attachTo: '#start_here',
     classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
     buttons: [
@@ -27,8 +27,8 @@ var startShepherdTour = function () {
 	        text: 'Next',
 	        classes: 'shepherd-button-example-primary',
 	        action: function() {
-	          window.location = 'http://www.thepyramidapp.com/session/new';
-	          shepherd.next;
+	        	window.location = '/session/new';
+	        	shepherd.next;
 	        }
 	    },
       	{
