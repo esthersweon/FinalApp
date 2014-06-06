@@ -61,7 +61,7 @@ var startShepherdTour = function () {
 
   shepherd.addStep('explainDashboard', {
     text: 'Phoream',
-    attachTo: '#photostream-low-nav-link bottom',//'#photostream-low-nav-link bottom',
+    attachTo: '#photostream-low-nav-link bottom',
     buttons: [
       {
         text: 'Back',
