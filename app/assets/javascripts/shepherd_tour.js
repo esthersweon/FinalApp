@@ -19,20 +19,19 @@ var startShepherdTour = function () {
   shepherd.addStep('welcome', {
     text: 'Welcome to Pyramid. We make collabaration stream-lined and efficent-- ' + 
     'in the professional, academic, & personal spheres. ' + 
-    'If you would like assistance as you navigate the site, please have our tour activated. ' + 
     'We hope you enjoy!',
     attachTo: '#start_here',
     classes: 'shepherd shepherd-open shepherd-theme-arrows shepherd-transparent-text',
     buttons: [
 	    {
-	        text: 'Activate',
+	        text: 'Next',
 	        classes: 'shepherd-button-example-primary',
 	        action: function() {
-	          Backbone.history.navigate('#projects', { trigger: true });
+	          window.location = 'http://www.thepyramidapp.com/session/new'
 	        }
 	    },
       	{
-	        text: 'Deactivate',
+	        text: 'Deactive Tour',
 	        classes: 'shepherd-button-primary',
 	        action: function () {
 	          endShepherdTour(shepherd);
@@ -40,6 +39,7 @@ var startShepherdTour = function () {
       	}
     ]
   });
+
   shepherd.addStep('uploading', {
     title: 'Uploading',
     text: 'From the upload page you can drag and drop photos. If you ' +

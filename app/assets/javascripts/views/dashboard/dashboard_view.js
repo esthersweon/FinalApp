@@ -3,7 +3,7 @@ FinalApp.Views.DashboardView = Backbone.View.extend({
 	template: JST['dashboard/view'], 
 
 	initialize: function(options) {
-		this.collection2 = options.collection2
+		this.collection2 = options.collection2;
 	},
 
 	render: function() {
@@ -11,6 +11,8 @@ FinalApp.Views.DashboardView = Backbone.View.extend({
 			projects: this.collection,
 			members: this.collection2
 		});
+
+		Shepherd.mediator.trigger('dashboardRendered');
 
 		this.$el.html(renderedContent);
 
