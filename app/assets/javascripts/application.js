@@ -9,11 +9,13 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializeJSON
 //= require underscore
+//= require shepherd.min
+//= require shepherd_tour
 //= require backbone
 //= require bootstrap
 //= require final_app

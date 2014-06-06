@@ -10,9 +10,13 @@
  *
  *= require_self
  *= require_tree .
+ *= require shepherd-theme-arrows
+ *= require shepherd-theme-arrows-plain-buttons
  */
 
 @import "bootstrap";
+@import "shepherd-theme-arrows";
+@import "shepherd-theme-arrows-plain-buttons";
 
 header {
   position: fixed;
@@ -46,6 +50,8 @@ header {
 
 #main-logo {
   width: 100%;
+  padding-left:400px;
+  padding-right:400px;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
@@ -193,3 +199,9 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.shepherd-element.shepherd-theme-arrows .shepherd-content {
+  width: 300px;
+  max-width: 100%; 
+  margin-left: auto}
+
