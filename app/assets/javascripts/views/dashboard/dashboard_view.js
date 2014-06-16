@@ -12,8 +12,6 @@ FinalApp.Views.DashboardView = Backbone.View.extend({
 			members: this.collection2
 		});
 
-		Shepherd.mediator.trigger('dashboardRendered');
-
 		this.$el.html(renderedContent);
 
 		return this;
